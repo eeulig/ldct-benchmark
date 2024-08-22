@@ -1,0 +1,46 @@
+name: bump version
+run-name: Bump the version number 🆙
+
+on:
+  workflow_call:
+    inputs:
+      bump-type:
+        required: true
+        type: string
+      desired-version:
+        required: false
+        type: string
+  workflow_dispatch:
+    inputs:
+      bump-type:
+        required: true
+        type: choice
+        options:
+        - major
+        - minor
+        - patch
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Bump version
+        run: |
+          python .github/workflows/version_manager.py ${{ inputs.bump-type }} ${{ inputs.desired-version }}
+      - name: Commit version bump
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add -A
+          git commit -m "${{ env.BUMPVERSION_COMMIT }}"
+          git push origin main

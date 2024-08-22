@@ -1,0 +1,139 @@
+site_name: LDCT Benchmark
+nav:
+  - Home: index.md
+  - Getting Started: getting_started.md
+  - Denoising Algorithms: denoising_algorithms.md
+  - Model Hub: model_hub.md
+  - Examples:
+    - Denoise DICOMs using pretrained models: examples/denoise_dicoms.md
+    - Train a custom model: examples/train_custom_model.md
+    - Test models: examples/test_models.md
+  - Code Reference:
+    - data: reference/ldctbench/data/LDCTMayo.md
+    - hub: 
+      - methods: reference/ldctbench/hub/methods.md
+      - load_model: reference/ldctbench/hub/load_model.md
+      - utils: reference/ldctbench/hub/utils.md
+    - methods:
+      - cnn10: 
+        - network: reference/ldctbench/methods/cnn10/network.md
+        - Trainer: reference/ldctbench/methods/cnn10/Trainer.md
+      - redcnn:
+        - network: reference/ldctbench/methods/redcnn/network.md
+        - Trainer: reference/ldctbench/methods/redcnn/Trainer.md
+      - wganvgg:
+        - network: reference/ldctbench/methods/wganvgg/network.md
+        - Trainer: reference/ldctbench/methods/wganvgg/Trainer.md
+      - resnet:
+        - network: reference/ldctbench/methods/resnet/network.md
+        - Trainer: reference/ldctbench/methods/resnet/Trainer.md
+      - qae:
+        - network: reference/ldctbench/methods/qae/network.md
+        - Trainer: reference/ldctbench/methods/qae/Trainer.md
+      - dugan:
+        - network: reference/ldctbench/methods/dugan/network.md
+        - Trainer: reference/ldctbench/methods/dugan/Trainer.md
+      - transct:
+        - network: reference/ldctbench/methods/transct/network.md
+        - Trainer: reference/ldctbench/methods/transct/Trainer.md
+      - bilateral:
+        - network: reference/ldctbench/methods/bilateral/network.md
+        - Trainer: reference/ldctbench/methods/bilateral/Trainer.md
+    - utils:
+      - training_utils: reference/ldctbench/utils/training_utils.md
+      - test_utils: reference/ldctbench/utils/test_utils.md
+      - metrics: reference/ldctbench/utils/metrics.md
+      - auxiliaries: reference/ldctbench/utils/auxiliaries.md
+
+theme:
+  name: material
+  favicon: assets/favicon.png
+  logo: assets/favicon.png
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/link
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: black
+      accent: indigo
+      toggle:
+        icon: material/toggle-switch-off
+        name: Switch to system preference
+  features:
+      - navigation.footer
+repo_url: https://github.com/eeulig/ldct-benchmark
+repo_name: eeulig/ldct-benchmark
+
+plugins:
+  - search
+  - autorefs
+  - gen-files:
+      scripts:
+      - docs/gen_ref_pages.py
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python:
+          options:
+            docstring_options:
+              ignore_init_summary: true
+            merge_init_into_class: true
+            show_if_no_docstring: false
+            show_object_full_path: false
+            allow_inspection: false
+            show_source: false
+            docstring_style: numpy
+            docstring_section_style: list
+            heading_level: 2
+            show_root_full_path: false
+            show_root_members_full_path: false
+            show_root_toc_entry: false
+          paths: [ldctbench]
+  - mike:
+      alias_type: symlink
+      redirect_template: null
+      deploy_prefix: ''
+      canonical_version: null
+      version_selector: true
+
+markdown_extensions:
+  - attr_list
+  - md_in_html
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - footnotes
+  - admonition
+  - pymdownx.details
+
+extra:
+  version:
+    provider: mike
+  
+extra_javascript:
+  - js/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+
+extra_css:
+  - https://unpkg.com/katex@0/dist/katex.min.css

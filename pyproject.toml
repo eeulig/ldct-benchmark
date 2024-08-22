@@ -1,0 +1,92 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ldct-benchmark"
+version = "0.0.1"
+authors = [
+    {name = "Elias Eulig", email = "elias.eulig@dkfz.de"},
+]
+description = "A benchmark for deep learning-based low dose CT image denoising"
+requires-python = ">=3.10"
+readme = "README.md"
+dependencies = [
+  "PyYAML",
+  "wandb",
+  "matplotlib",
+  "tqdm>4.66",
+  "scikit-image",
+  "pydicom",
+  "platformdirs",
+  "torchmetrics",
+  "pandas",
+  "tabulate",
+  "torch",
+  "torchvision",
+]
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "pytest",
+    "poethepoet",
+    "flake8",
+]
+docs = [
+    "mkdocs",
+    "mkdocs-material",
+    "mkdocstrings-python",
+    "mkdocs-gen-files",
+    "mike",
+]
+
+[tool.setuptools.packages.find]
+include = ["ldctbench*"]
+exclude = ["assets*", "tests*", "configs*"]
+namespaces = false
+
+[tool.black]
+exclude = '''
+/(
+    env
+    | \.git
+    | build
+)/
+'''
+
+target-version = ["py310"]
+color = true
+line-length = 88
+
+[tool.isort]
+skip = ["env", "build", ".git"]
+profile = "black"
+skip_gitignore = true
+color_output = false
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = [
+    "tests",
+]
+
+[tool.poe.tasks]
+_black = 'black .'
+_isort = 'isort .'
+_black_check = 'black --check .'
+_isort_check = 'isort --check .'
+lint = "flake8 . --select=E9,F63,F7,F82 --show-source --statistics"
+test = "pytest -v"
+
+[tool.poe.tasks.format]
+sequence = ['_black', '_isort']
+ignore_fail = 'return_non_zero'
+
+[tool.poe.tasks.format_check]
+sequence = ['lint', '_black_check', '_isort_check']
+ignore_fail = 'return_non_zero'
+
+[tool.poe.tasks.verify]
+sequence = ['format_check', 'test']
+ignore_fail = "return_non_zero"

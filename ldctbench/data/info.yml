@@ -1,0 +1,908 @@
+max: 4095.0
+mean: 481.45419786099086
+min: 0.0
+robust: false
+std: 502.18507379395044
+test_set:
+- id: C121
+  input: ./LDCT-and-Projection-data/C121/12-23-2021-NA-NA-61870/1.000000-Low Dose
+    Images-00959
+  n_slices: 392
+  target: ./LDCT-and-Projection-data/C121/12-23-2021-NA-NA-61870/1.000000-Full Dose
+    Images-92811
+- id: C249
+  input: ./LDCT-and-Projection-data/C249/12-23-2021-NA-NA-10802/1.000000-Low Dose
+    Images-15627
+  n_slices: 350
+  target: ./LDCT-and-Projection-data/C249/12-23-2021-NA-NA-10802/1.000000-Full Dose
+    Images-01860
+- id: C170
+  input: ./LDCT-and-Projection-data/C170/12-23-2021-NA-NA-00819/1.000000-Low Dose
+    Images-21310
+  n_slices: 359
+  target: ./LDCT-and-Projection-data/C170/12-23-2021-NA-NA-00819/1.000000-Full Dose
+    Images-93639
+- id: C135
+  input: ./LDCT-and-Projection-data/C135/12-23-2021-NA-NA-63971/1.000000-Low Dose
+    Images-09111
+  n_slices: 355
+  target: ./LDCT-and-Projection-data/C135/12-23-2021-NA-NA-63971/1.000000-Full Dose
+    Images-53667
+- id: C280
+  input: ./LDCT-and-Projection-data/C280/12-23-2021-NA-NA-53988/1.000000-Low Dose
+    Images-61674
+  n_slices: 369
+  target: ./LDCT-and-Projection-data/C280/12-23-2021-NA-NA-53988/1.000000-Full Dose
+    Images-32482
+- id: L241
+  input: ./LDCT-and-Projection-data/L241/12-23-2021-NA-NA-50920/1.000000-Low Dose
+    Images-31092
+  n_slices: 155
+  target: ./LDCT-and-Projection-data/L241/12-23-2021-NA-NA-50920/1.000000-Full Dose
+    Images-70970
+- id: L107
+  input: ./LDCT-and-Projection-data/L107/12-23-2021-NA-NA-02131/1.000000-Low Dose
+    Images-03227
+  n_slices: 202
+  target: ./LDCT-and-Projection-data/L107/12-23-2021-NA-NA-02131/1.000000-Full Dose
+    Images-64229
+- id: L006
+  input: ./LDCT-and-Projection-data/L006/12-23-2021-NA-NA-42906/1.000000-Low Dose
+    Images-35629
+  n_slices: 215
+  target: ./LDCT-and-Projection-data/L006/12-23-2021-NA-NA-42906/1.000000-Full Dose
+    Images-18130
+- id: L221
+  input: ./LDCT-and-Projection-data/L221/12-23-2021-NA-NA-01020/1.000000-Low Dose
+    Images-91207
+  n_slices: 99
+  target: ./LDCT-and-Projection-data/L221/12-23-2021-NA-NA-01020/1.000000-Full Dose
+    Images-83206
+- id: L220
+  input: ./LDCT-and-Projection-data/L220/12-23-2021-NA-NA-93580/1.000000-Low Dose
+    Images-00007
+  n_slices: 156
+  target: ./LDCT-and-Projection-data/L220/12-23-2021-NA-NA-93580/1.000000-Full Dose
+    Images-22124
+- id: N176
+  input: ./LDCT-and-Projection-data/N176/12-23-2021-NA-NA-41987/1.000000-Low Dose
+    Images-31416
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N176/12-23-2021-NA-NA-41987/1.000000-Full Dose
+    Images-82249
+- id: N138
+  input: ./LDCT-and-Projection-data/N138/12-23-2021-NA-NA-22426/1.000000-Low Dose
+    Images-10663
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N138/12-23-2021-NA-NA-22426/1.000000-Full Dose
+    Images-93683
+- id: N153
+  input: ./LDCT-and-Projection-data/N153/12-23-2021-NA-NA-81896/1.000000-Low Dose
+    Images-71829
+  n_slices: 38
+  target: ./LDCT-and-Projection-data/N153/12-23-2021-NA-NA-81896/1.000000-Full Dose
+    Images-16891
+- id: N284
+  input: ./LDCT-and-Projection-data/N284/12-23-2021-NA-NA-22739/1.000000-Low Dose
+    Images-37908
+  n_slices: 39
+  target: ./LDCT-and-Projection-data/N284/12-23-2021-NA-NA-22739/1.000000-Full Dose
+    Images-41530
+- id: N090
+  input: ./LDCT-and-Projection-data/N090/12-23-2021-NA-NA-23711/1.000000-Low Dose
+    Images-92881
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N090/12-23-2021-NA-NA-23711/1.000000-Full Dose
+    Images-91604
+train_set:
+- id: C095
+  input: ./LDCT-and-Projection-data/C095/12-23-2021-NA-NA-41601/1.000000-Low Dose
+    Images-40418
+  n_slices: 322
+  target: ./LDCT-and-Projection-data/C095/12-23-2021-NA-NA-41601/1.000000-Full Dose
+    Images-44048
+- id: C261
+  input: ./LDCT-and-Projection-data/C261/12-23-2021-NA-NA-91667/1.000000-Low Dose
+    Images-70905
+  n_slices: 329
+  target: ./LDCT-and-Projection-data/C261/12-23-2021-NA-NA-91667/1.000000-Full Dose
+    Images-63704
+- id: C296
+  input: ./LDCT-and-Projection-data/C296/12-23-2021-NA-NA-16726/1.000000-Low Dose
+    Images-11387
+  n_slices: 329
+  target: ./LDCT-and-Projection-data/C296/12-23-2021-NA-NA-16726/1.000000-Full Dose
+    Images-05724
+- id: C218
+  input: ./LDCT-and-Projection-data/C218/12-23-2021-NA-NA-23900/1.000000-Low Dose
+    Images-32451
+  n_slices: 357
+  target: ./LDCT-and-Projection-data/C218/12-23-2021-NA-NA-23900/1.000000-Full Dose
+    Images-70039
+- id: C224
+  input: ./LDCT-and-Projection-data/C224/12-23-2021-NA-NA-20860/1.000000-Low Dose
+    Images-13799
+  n_slices: 332
+  target: ./LDCT-and-Projection-data/C224/12-23-2021-NA-NA-20860/1.000000-Full Dose
+    Images-14371
+- id: C267
+  input: ./LDCT-and-Projection-data/C267/12-23-2021-NA-NA-13659/1.000000-Low Dose
+    Images-52166
+  n_slices: 333
+  target: ./LDCT-and-Projection-data/C267/12-23-2021-NA-NA-13659/1.000000-Full Dose
+    Images-42223
+- id: C099
+  input: ./LDCT-and-Projection-data/C099/12-23-2021-NA-NA-31907/1.000000-Low Dose
+    Images-40983
+  n_slices: 332
+  target: ./LDCT-and-Projection-data/C099/12-23-2021-NA-NA-31907/1.000000-Full Dose
+    Images-63270
+- id: C030
+  input: ./LDCT-and-Projection-data/C030/12-23-2021-NA-NA-00817/2.000000-Low Dose
+    Images-21402
+  n_slices: 303
+  target: ./LDCT-and-Projection-data/C030/12-23-2021-NA-NA-00817/1.000000-Full Dose
+    Images-42665
+- id: C241
+  input: ./LDCT-and-Projection-data/C241/12-23-2021-NA-NA-73915/1.000000-Low Dose
+    Images-30731
+  n_slices: 366
+  target: ./LDCT-and-Projection-data/C241/12-23-2021-NA-NA-73915/1.000000-Full Dose
+    Images-22189
+- id: C162
+  input: ./LDCT-and-Projection-data/C162/12-23-2021-NA-NA-17871/1.000000-Low Dose
+    Images-22759
+  n_slices: 343
+  target: ./LDCT-and-Projection-data/C162/12-23-2021-NA-NA-17871/1.000000-Full Dose
+    Images-70376
+- id: C268
+  input: ./LDCT-and-Projection-data/C268/12-23-2021-NA-NA-63578/1.000000-Low Dose
+    Images-33611
+  n_slices: 370
+  target: ./LDCT-and-Projection-data/C268/12-23-2021-NA-NA-63578/1.000000-Full Dose
+    Images-41559
+- id: C128
+  input: ./LDCT-and-Projection-data/C128/12-23-2021-NA-NA-02217/1.000000-Low Dose
+    Images-10572
+  n_slices: 345
+  target: ./LDCT-and-Projection-data/C128/12-23-2021-NA-NA-02217/1.000000-Full Dose
+    Images-30214
+- id: C252
+  input: ./LDCT-and-Projection-data/C252/12-23-2021-NA-NA-42474/1.000000-Low Dose
+    Images-81566
+  n_slices: 363
+  target: ./LDCT-and-Projection-data/C252/12-23-2021-NA-NA-42474/1.000000-Full Dose
+    Images-11169
+- id: C234
+  input: ./LDCT-and-Projection-data/C234/12-23-2021-NA-NA-94287/1.000000-Low Dose
+    Images-73831
+  n_slices: 380
+  target: ./LDCT-and-Projection-data/C234/12-23-2021-NA-NA-94287/1.000000-Full Dose
+    Images-72889
+- id: C130
+  input: ./LDCT-and-Projection-data/C130/12-23-2021-NA-NA-04244/1.000000-Low Dose
+    Images-00363
+  n_slices: 379
+  target: ./LDCT-and-Projection-data/C130/12-23-2021-NA-NA-04244/1.000000-Full Dose
+    Images-30091
+- id: C246
+  input: ./LDCT-and-Projection-data/C246/12-23-2021-NA-NA-42847/1.000000-Low Dose
+    Images-19230
+  n_slices: 363
+  target: ./LDCT-and-Projection-data/C246/12-23-2021-NA-NA-42847/1.000000-Full Dose
+    Images-90598
+- id: C124
+  input: ./LDCT-and-Projection-data/C124/12-23-2021-NA-NA-73316/1.000000-Low Dose
+    Images-22994
+  n_slices: 383
+  target: ./LDCT-and-Projection-data/C124/12-23-2021-NA-NA-73316/1.000000-Full Dose
+    Images-13941
+- id: C077
+  input: ./LDCT-and-Projection-data/C077/12-23-2021-NA-NA-71841/1.000000-Low Dose
+    Images-13369
+  n_slices: 386
+  target: ./LDCT-and-Projection-data/C077/12-23-2021-NA-NA-71841/1.000000-Full Dose
+    Images-80792
+- id: C002
+  input: ./LDCT-and-Projection-data/C002/12-23-2021-NA-NA-62464/1.000000-Low Dose
+    Images-39882
+  n_slices: 280
+  target: ./LDCT-and-Projection-data/C002/12-23-2021-NA-NA-62464/1.000000-Full Dose
+    Images-22038
+- id: C021
+  input: ./LDCT-and-Projection-data/C021/12-23-2021-NA-NA-10262/1.000000-Low Dose
+    Images-31031
+  n_slices: 378
+  target: ./LDCT-and-Projection-data/C021/12-23-2021-NA-NA-10262/1.000000-Full Dose
+    Images-62518
+- id: C203
+  input: ./LDCT-and-Projection-data/C203/12-23-2021-NA-NA-01966/1.000000-Low Dose
+    Images-71221
+  n_slices: 302
+  target: ./LDCT-and-Projection-data/C203/12-23-2021-NA-NA-01966/1.000000-Full Dose
+    Images-61936
+- id: C111
+  input: ./LDCT-and-Projection-data/C111/01-19-2022-NA-NA-73373/1.000000-Low Dose
+    Images-50353
+  n_slices: 305
+  target: ./LDCT-and-Projection-data/C111/01-13-2022-NA-NA-73373/1.000000-Full Dose
+    Images-62126
+- id: C179
+  input: ./LDCT-and-Projection-data/C179/12-23-2021-NA-NA-44254/1.000000-Low Dose
+    Images-50867
+  n_slices: 334
+  target: ./LDCT-and-Projection-data/C179/12-23-2021-NA-NA-44254/1.000000-Full Dose
+    Images-60955
+- id: C012
+  input: ./LDCT-and-Projection-data/C012/12-23-2021-NA-NA-93425/1.000000-Low Dose
+    Images-12506
+  n_slices: 351
+  target: ./LDCT-and-Projection-data/C012/12-23-2021-NA-NA-93425/1.000000-Full Dose
+    Images-93580
+- id: C081
+  input: ./LDCT-and-Projection-data/C081/12-23-2021-NA-NA-61094/1.000000-Low Dose
+    Images-30752
+  n_slices: 356
+  target: ./LDCT-and-Projection-data/C081/12-23-2021-NA-NA-61094/1.000000-Full Dose
+    Images-00924
+- id: C004
+  input: ./LDCT-and-Projection-data/C004/12-23-2021-NA-NA-40816/1.000000-Low Dose
+    Images-30622
+  n_slices: 361
+  target: ./LDCT-and-Projection-data/C004/12-23-2021-NA-NA-40816/1.000000-Full Dose
+    Images-73627
+- id: C120
+  input: ./LDCT-and-Projection-data/C120/12-23-2021-NA-NA-30414/1.000000-Low Dose
+    Images-81661
+  n_slices: 347
+  target: ./LDCT-and-Projection-data/C120/12-23-2021-NA-NA-30414/1.000000-Full Dose
+    Images-23396
+- id: C193
+  input: ./LDCT-and-Projection-data/C193/12-23-2021-NA-NA-41385/1.000000-Low Dose
+    Images-40262
+  n_slices: 365
+  target: ./LDCT-and-Projection-data/C193/12-23-2021-NA-NA-41385/1.000000-Full Dose
+    Images-43193
+- id: C166
+  input: ./LDCT-and-Projection-data/C166/12-23-2021-NA-NA-50155/1.000000-Low Dose
+    Images-43159
+  n_slices: 396
+  target: ./LDCT-and-Projection-data/C166/12-23-2021-NA-NA-50155/1.000000-Full Dose
+    Images-04805
+- id: C257
+  input: ./LDCT-and-Projection-data/C257/12-23-2021-NA-NA-62894/1.000000-Low Dose
+    Images-73095
+  n_slices: 357
+  target: ./LDCT-and-Projection-data/C257/12-23-2021-NA-NA-62894/1.000000-Full Dose
+    Images-90303
+- id: C160
+  input: ./LDCT-and-Projection-data/C160/12-23-2021-NA-NA-82069/1.000000-Low Dose
+    Images-63509
+  n_slices: 315
+  target: ./LDCT-and-Projection-data/C160/12-23-2021-NA-NA-82069/1.000000-Full Dose
+    Images-62968
+- id: C016
+  input: ./LDCT-and-Projection-data/C016/12-23-2021-NA-NA-72558/1.000000-Low Dose
+    Images-82312
+  n_slices: 319
+  target: ./LDCT-and-Projection-data/C016/12-23-2021-NA-NA-72558/1.000000-Full Dose
+    Images-51981
+- id: C027
+  input: ./LDCT-and-Projection-data/C027/01-19-2022-NA-NA-40777/1.000000-Low Dose
+    Images-53324
+  n_slices: 298
+  target: ./LDCT-and-Projection-data/C027/01-13-2022-NA-NA-40777/1.000000-Full Dose
+    Images-03450
+- id: C050
+  input: ./LDCT-and-Projection-data/C050/12-23-2021-NA-NA-38458/1.000000-Low Dose
+    Images-81156
+  n_slices: 394
+  target: ./LDCT-and-Projection-data/C050/12-23-2021-NA-NA-38458/1.000000-Full Dose
+    Images-84094
+- id: C158
+  input: ./LDCT-and-Projection-data/C158/12-23-2021-NA-NA-83548/1.000000-Low Dose
+    Images-36163
+  n_slices: 363
+  target: ./LDCT-and-Projection-data/C158/12-23-2021-NA-NA-83548/1.000000-Full Dose
+    Images-40123
+- id: L081
+  input: ./LDCT-and-Projection-data/L081/12-23-2021-NA-NA-42146/1.000000-Low Dose
+    Images-27948
+  n_slices: 132
+  target: ./LDCT-and-Projection-data/L081/12-23-2021-NA-NA-42146/1.000000-Full Dose
+    Images-73252
+- id: L248
+  input: ./LDCT-and-Projection-data/L248/12-23-2021-NA-NA-41828/1.000000-Low Dose
+    Images-05042
+  n_slices: 167
+  target: ./LDCT-and-Projection-data/L248/12-23-2021-NA-NA-41828/1.000000-Full Dose
+    Images-91712
+- id: L203
+  input: ./LDCT-and-Projection-data/L203/12-23-2021-NA-NA-33849/1.000000-Low Dose
+    Images-60699
+  n_slices: 223
+  target: ./LDCT-and-Projection-data/L203/12-23-2021-NA-NA-33849/1.000000-Full Dose
+    Images-35840
+- id: L219
+  input: ./LDCT-and-Projection-data/L219/12-23-2021-NA-NA-63714/1.000000-Low Dose
+    Images-22321
+  n_slices: 154
+  target: ./LDCT-and-Projection-data/L219/12-23-2021-NA-NA-63714/1.000000-Full Dose
+    Images-28032
+- id: L210
+  input: ./LDCT-and-Projection-data/L210/12-23-2021-NA-NA-73283/1.000000-Low Dose
+    Images-22875
+  n_slices: 149
+  target: ./LDCT-and-Projection-data/L210/12-23-2021-NA-NA-73283/1.000000-Full Dose
+    Images-34221
+- id: L277
+  input: ./LDCT-and-Projection-data/L277/12-23-2021-NA-NA-31595/1.000000-Low Dose
+    Images-02403
+  n_slices: 214
+  target: ./LDCT-and-Projection-data/L277/12-23-2021-NA-NA-31595/1.000000-Full Dose
+    Images-22692
+- id: L057
+  input: ./LDCT-and-Projection-data/L057/12-23-2021-NA-NA-33955/1.000000-Low Dose
+    Images-01420
+  n_slices: 149
+  target: ./LDCT-and-Projection-data/L057/12-23-2021-NA-NA-33955/1.000000-Full Dose
+    Images-73465
+- id: L229
+  input: ./LDCT-and-Projection-data/L229/12-23-2021-NA-NA-12191/1.000000-Low Dose
+    Images-62446
+  n_slices: 136
+  target: ./LDCT-and-Projection-data/L229/12-23-2021-NA-NA-12191/1.000000-Full Dose
+    Images-83534
+- id: L131
+  input: ./LDCT-and-Projection-data/L131/12-23-2021-NA-NA-11616/1.000000-Low Dose
+    Images-13865
+  n_slices: 91
+  target: ./LDCT-and-Projection-data/L131/12-23-2021-NA-NA-11616/1.000000-Full Dose
+    Images-51623
+- id: L114
+  input: ./LDCT-and-Projection-data/L114/12-23-2021-NA-NA-42685/1.000000-Low Dose
+    Images-31673
+  n_slices: 159
+  target: ./LDCT-and-Projection-data/L114/12-23-2021-NA-NA-42685/1.000000-Full Dose
+    Images-10183
+- id: L004
+  input: ./LDCT-and-Projection-data/L004/12-23-2021-NA-NA-40641/1.000000-Low Dose
+    Images-41625
+  n_slices: 99
+  target: ./LDCT-and-Projection-data/L004/12-23-2021-NA-NA-40641/1.000000-Full Dose
+    Images-63186
+- id: L237
+  input: ./LDCT-and-Projection-data/L237/12-23-2021-NA-NA-12584/1.000000-Low Dose
+    Images-12976
+  n_slices: 140
+  target: ./LDCT-and-Projection-data/L237/12-23-2021-NA-NA-12584/1.000000-Full Dose
+    Images-80765
+- id: L148
+  input: ./LDCT-and-Projection-data/L148/12-23-2021-NA-NA-22515/1.000000-Low Dose
+    Images-51969
+  n_slices: 210
+  target: ./LDCT-and-Projection-data/L148/12-23-2021-NA-NA-22515/1.000000-Full Dose
+    Images-93070
+- id: L145
+  input: ./LDCT-and-Projection-data/L145/12-23-2021-NA-NA-12563/1.000000-Low Dose
+    Images-61076
+  n_slices: 160
+  target: ./LDCT-and-Projection-data/L145/12-23-2021-NA-NA-12563/1.000000-Full Dose
+    Images-25130
+- id: L116
+  input: ./LDCT-and-Projection-data/L116/12-23-2021-NA-NA-02953/1.000000-Low Dose
+    Images-62560
+  n_slices: 228
+  target: ./LDCT-and-Projection-data/L116/12-23-2021-NA-NA-02953/1.000000-Full Dose
+    Images-83876
+- id: L150
+  input: ./LDCT-and-Projection-data/L150/12-23-2021-NA-NA-00811/1.000000-Low Dose
+    Images-43143
+  n_slices: 221
+  target: ./LDCT-and-Projection-data/L150/12-23-2021-NA-NA-00811/1.000000-Full Dose
+    Images-32592
+- id: L110
+  input: ./LDCT-and-Projection-data/L110/12-23-2021-NA-NA-14786/1.000000-Low Dose
+    Images-62191
+  n_slices: 133
+  target: ./LDCT-and-Projection-data/L110/12-23-2021-NA-NA-14786/1.000000-Full Dose
+    Images-17413
+- id: L232
+  input: ./LDCT-and-Projection-data/L232/12-23-2021-NA-NA-52298/1.000000-Low Dose
+    Images-60668
+  n_slices: 169
+  target: ./LDCT-and-Projection-data/L232/12-23-2021-NA-NA-52298/1.000000-Full Dose
+    Images-42931
+- id: L134
+  input: ./LDCT-and-Projection-data/L134/12-23-2021-NA-NA-03088/1.000000-Low Dose
+    Images-91984
+  n_slices: 217
+  target: ./LDCT-and-Projection-data/L134/12-23-2021-NA-NA-03088/1.000000-Full Dose
+    Images-13018
+- id: L056
+  input: ./LDCT-and-Projection-data/L056/12-23-2021-NA-NA-43434/1.000000-Low Dose
+    Images-61966
+  n_slices: 93
+  target: ./LDCT-and-Projection-data/L056/12-23-2021-NA-NA-43434/1.000000-Full Dose
+    Images-72444
+- id: L075
+  input: ./LDCT-and-Projection-data/L075/12-23-2021-NA-NA-02911/1.000000-Low Dose
+    Images-11558
+  n_slices: 137
+  target: ./LDCT-and-Projection-data/L075/12-23-2021-NA-NA-02911/1.000000-Full Dose
+    Images-27792
+- id: L209
+  input: ./LDCT-and-Projection-data/L209/12-23-2021-NA-NA-22966/1.000000-Low Dose
+    Images-63288
+  n_slices: 98
+  target: ./LDCT-and-Projection-data/L209/12-23-2021-NA-NA-22966/1.000000-Full Dose
+    Images-11228
+- id: L019
+  input: ./LDCT-and-Projection-data/L019/12-23-2021-NA-NA-03411/1.000000-Low Dose
+    Images-71448
+  n_slices: 169
+  target: ./LDCT-and-Projection-data/L019/12-23-2021-NA-NA-03411/1.000000-Full Dose
+    Images-23860
+- id: L064
+  input: ./LDCT-and-Projection-data/L064/12-23-2021-NA-NA-20463/1.000000-Low Dose
+    Images-61144
+  n_slices: 209
+  target: ./LDCT-and-Projection-data/L064/12-23-2021-NA-NA-20463/1.000000-Full Dose
+    Images-23308
+- id: L299
+  input: ./LDCT-and-Projection-data/L299/12-23-2021-NA-NA-31304/1.000000-Low Dose
+    Images-20326
+  n_slices: 155
+  target: ./LDCT-and-Projection-data/L299/12-23-2021-NA-NA-31304/1.000000-Full Dose
+    Images-29696
+- id: L160
+  input: ./LDCT-and-Projection-data/L160/12-23-2021-NA-NA-51607/1.000000-Low Dose
+    Images-08864
+  n_slices: 115
+  target: ./LDCT-and-Projection-data/L160/12-23-2021-NA-NA-51607/1.000000-Full Dose
+    Images-05601
+- id: L049
+  input: ./LDCT-and-Projection-data/L049/12-23-2021-NA-NA-40818/1.000000-Low Dose
+    Images-38720
+  n_slices: 220
+  target: ./LDCT-and-Projection-data/L049/12-23-2021-NA-NA-40818/1.000000-Full Dose
+    Images-62638
+- id: L072
+  input: ./LDCT-and-Projection-data/L072/12-23-2021-NA-NA-81517/1.000000-Low Dose
+    Images-60421
+  n_slices: 142
+  target: ./LDCT-and-Projection-data/L072/12-23-2021-NA-NA-81517/1.000000-Full Dose
+    Images-61227
+- id: L071
+  input: ./LDCT-and-Projection-data/L071/12-23-2021-NA-NA-33862/1.000000-Low Dose
+    Images-84166
+  n_slices: 154
+  target: ./LDCT-and-Projection-data/L071/12-23-2021-NA-NA-33862/1.000000-Full Dose
+    Images-70507
+- id: L273
+  input: ./LDCT-and-Projection-data/L273/12-23-2021-NA-NA-07113/1.000000-Low Dose
+    Images-61347
+  n_slices: 165
+  target: ./LDCT-and-Projection-data/L273/12-23-2021-NA-NA-07113/1.000000-Full Dose
+    Images-40856
+- id: L175
+  input: ./LDCT-and-Projection-data/L175/12-23-2021-NA-NA-82117/1.000000-Low Dose
+    Images-62817
+  n_slices: 153
+  target: ./LDCT-and-Projection-data/L175/12-23-2021-NA-NA-82117/1.000000-Full Dose
+    Images-70359
+- id: L178
+  input: ./LDCT-and-Projection-data/L178/12-23-2021-NA-NA-51393/1.000000-Low Dose
+    Images-02765
+  n_slices: 202
+  target: ./LDCT-and-Projection-data/L178/12-23-2021-NA-NA-51393/1.000000-Full Dose
+    Images-33693
+- id: L125
+  input: ./LDCT-and-Projection-data/L125/12-23-2021-NA-NA-02931/1.000000-Low Dose
+    Images-41070
+  n_slices: 205
+  target: ./LDCT-and-Projection-data/L125/12-23-2021-NA-NA-02931/1.000000-Full Dose
+    Images-83418
+- id: L266
+  input: ./LDCT-and-Projection-data/L266/12-23-2021-NA-NA-72546/2.000000-Low Dose
+    Images-32870
+  n_slices: 175
+  target: ./LDCT-and-Projection-data/L266/12-23-2021-NA-NA-72546/1.000000-Full Dose
+    Images-54016
+- id: L170
+  input: ./LDCT-and-Projection-data/L170/12-23-2021-NA-NA-52303/1.000000-Low Dose
+    Images-60514
+  n_slices: 137
+  target: ./LDCT-and-Projection-data/L170/12-23-2021-NA-NA-52303/1.000000-Full Dose
+    Images-14260
+- id: N190
+  input: ./LDCT-and-Projection-data/N190/12-23-2021-NA-NA-21450/1.000000-Low Dose
+    Images-21617
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N190/12-23-2021-NA-NA-21450/1.000000-Full Dose
+    Images-34193
+- id: N082
+  input: ./LDCT-and-Projection-data/N082/12-23-2021-NA-NA-64130/1.000000-Low Dose
+    Images-08881
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N082/12-23-2021-NA-NA-64130/1.000000-Full Dose
+    Images-70884
+- id: N072
+  input: ./LDCT-and-Projection-data/N072/12-23-2021-NA-NA-30320/1.000000-Low Dose
+    Images-83056
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N072/12-23-2021-NA-NA-30320/1.000000-Full Dose
+    Images-18943
+- id: N175
+  input: ./LDCT-and-Projection-data/N175/12-23-2021-NA-NA-82704/1.000000-Low Dose
+    Images-03602
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N175/12-23-2021-NA-NA-82704/1.000000-Full Dose
+    Images-12311
+- id: N236
+  input: ./LDCT-and-Projection-data/N236/12-23-2021-NA-NA-32070/1.000000-Low Dose
+    Images-32270
+  n_slices: 36
+  target: ./LDCT-and-Projection-data/N236/12-23-2021-NA-NA-32070/1.000000-Full Dose
+    Images-02234
+- id: N181
+  input: ./LDCT-and-Projection-data/N181/12-23-2021-NA-NA-10423/1.000000-Low Dose
+    Images-64001
+  n_slices: 34
+  target: ./LDCT-and-Projection-data/N181/12-23-2021-NA-NA-10423/1.000000-Full Dose
+    Images-90576
+- id: N204
+  input: ./LDCT-and-Projection-data/N204/12-23-2021-NA-NA-73872/1.000000-Low Dose
+    Images-11203
+  n_slices: 31
+  target: ./LDCT-and-Projection-data/N204/12-23-2021-NA-NA-73872/1.000000-Full Dose
+    Images-31092
+- id: N270
+  input: ./LDCT-and-Projection-data/N270/12-23-2021-NA-NA-51151/1.000000-Low Dose
+    Images-32241
+  n_slices: 38
+  target: ./LDCT-and-Projection-data/N270/12-23-2021-NA-NA-51151/1.000000-Full Dose
+    Images-34721
+- id: N156
+  input: ./LDCT-and-Projection-data/N156/12-23-2021-NA-NA-13986/1.000000-Low Dose
+    Images-31248
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N156/12-23-2021-NA-NA-13986/1.000000-Full Dose
+    Images-73429
+- id: N140
+  input: ./LDCT-and-Projection-data/N140/12-23-2021-NA-NA-91187/1.000000-Low Dose
+    Images-01446
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N140/12-23-2021-NA-NA-91187/1.000000-Full Dose
+    Images-01568
+- id: N293
+  input: ./LDCT-and-Projection-data/N293/12-23-2021-NA-NA-60207/1.000000-Low Dose
+    Images-22734
+  n_slices: 46
+  target: ./LDCT-and-Projection-data/N293/12-23-2021-NA-NA-60207/1.000000-Full Dose
+    Images-34055
+- id: N132
+  input: ./LDCT-and-Projection-data/N132/12-23-2021-NA-NA-32031/1.000000-Low Dose
+    Images-90121
+  n_slices: 34
+  target: ./LDCT-and-Projection-data/N132/12-23-2021-NA-NA-32031/1.000000-Full Dose
+    Images-51665
+- id: N141
+  input: ./LDCT-and-Projection-data/N141/12-23-2021-NA-NA-11197/1.000000-Low Dose
+    Images-64429
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N141/12-23-2021-NA-NA-11197/1.000000-Full Dose
+    Images-16889
+- id: N105
+  input: ./LDCT-and-Projection-data/N105/12-23-2021-NA-NA-32273/1.000000-Low Dose
+    Images-04283
+  n_slices: 38
+  target: ./LDCT-and-Projection-data/N105/12-23-2021-NA-NA-32273/1.000000-Full Dose
+    Images-01839
+- id: N180
+  input: ./LDCT-and-Projection-data/N180/12-23-2021-NA-NA-43731/1.000000-Low Dose
+    Images-12966
+  n_slices: 36
+  target: ./LDCT-and-Projection-data/N180/12-23-2021-NA-NA-43731/1.000000-Full Dose
+    Images-50479
+- id: N264
+  input: ./LDCT-and-Projection-data/N264/12-23-2021-NA-NA-73038/1.000000-Low Dose
+    Images-40519
+  n_slices: 34
+  target: ./LDCT-and-Projection-data/N264/12-23-2021-NA-NA-73038/1.000000-Full Dose
+    Images-82268
+- id: N160
+  input: ./LDCT-and-Projection-data/N160/12-23-2021-NA-NA-13902/1.000000-Low Dose
+    Images-60221
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N160/12-23-2021-NA-NA-13902/1.000000-Full Dose
+    Images-21061
+- id: N202
+  input: ./LDCT-and-Projection-data/N202/12-23-2021-NA-NA-24124/1.000000-Low Dose
+    Images-12316
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N202/12-23-2021-NA-NA-24124/1.000000-Full Dose
+    Images-73117
+- id: N085
+  input: ./LDCT-and-Projection-data/N085/12-23-2021-NA-NA-02150/1.000000-Low Dose
+    Images-40031
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N085/12-23-2021-NA-NA-02150/1.000000-Full Dose
+    Images-91049
+- id: N051
+  input: ./LDCT-and-Projection-data/N051/12-23-2021-NA-NA-19254/1.000000-Low Dose
+    Images-53498
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N051/12-23-2021-NA-NA-19254/1.000000-Full Dose
+    Images-90849
+- id: N177
+  input: ./LDCT-and-Projection-data/N177/12-23-2021-NA-NA-60878/1.000000-Low Dose
+    Images-84061
+  n_slices: 36
+  target: ./LDCT-and-Projection-data/N177/12-23-2021-NA-NA-60878/1.000000-Full Dose
+    Images-31885
+- id: N209
+  input: ./LDCT-and-Projection-data/N209/12-23-2021-NA-NA-03424/1.000000-Low Dose
+    Images-44949
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N209/12-23-2021-NA-NA-03424/1.000000-Full Dose
+    Images-72630
+- id: N216
+  input: ./LDCT-and-Projection-data/N216/12-23-2021-NA-NA-37002/1.000000-Low Dose
+    Images-54098
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N216/12-23-2021-NA-NA-37002/1.000000-Full Dose
+    Images-63426
+- id: N298
+  input: ./LDCT-and-Projection-data/N298/12-23-2021-NA-NA-21807/1.000000-Low Dose
+    Images-70816
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N298/12-23-2021-NA-NA-21807/1.000000-Full Dose
+    Images-28275
+- id: N187
+  input: ./LDCT-and-Projection-data/N187/12-23-2021-NA-NA-22087/1.000000-Low Dose
+    Images-63382
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N187/12-23-2021-NA-NA-22087/1.000000-Full Dose
+    Images-81626
+- id: N100
+  input: ./LDCT-and-Projection-data/N100/12-23-2021-NA-NA-72315/1.000000-Low Dose
+    Images-02831
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N100/12-23-2021-NA-NA-72315/1.000000-Full Dose
+    Images-53052
+- id: N113
+  input: ./LDCT-and-Projection-data/N113/12-23-2021-NA-NA-52379/1.000000-Low Dose
+    Images-63687
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N113/12-23-2021-NA-NA-52379/1.000000-Full Dose
+    Images-92863
+- id: N265
+  input: ./LDCT-and-Projection-data/N265/12-23-2021-NA-NA-74276/1.000000-Low Dose
+    Images-31380
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N265/12-23-2021-NA-NA-74276/1.000000-Full Dose
+    Images-74259
+- id: N005
+  input: ./LDCT-and-Projection-data/N005/12-23-2021-NA-NA-16466/1.000000-Low Dose
+    Images-11030
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N005/12-23-2021-NA-NA-16466/1.000000-Full Dose
+    Images-60263
+- id: N076
+  input: ./LDCT-and-Projection-data/N076/12-23-2021-NA-NA-24521/1.000000-Low Dose
+    Images-08731
+  n_slices: 40
+  target: ./LDCT-and-Projection-data/N076/12-23-2021-NA-NA-24521/1.000000-Full Dose
+    Images-43836
+- id: N169
+  input: ./LDCT-and-Projection-data/N169/12-23-2021-NA-NA-41236/1.000000-Low Dose
+    Images-10434
+  n_slices: 39
+  target: ./LDCT-and-Projection-data/N169/12-23-2021-NA-NA-41236/1.000000-Full Dose
+    Images-50494
+- id: N053
+  input: ./LDCT-and-Projection-data/N053/12-23-2021-NA-NA-38573/1.000000-Low Dose
+    Images-73348
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N053/12-23-2021-NA-NA-38573/1.000000-Full Dose
+    Images-20103
+- id: N127
+  input: ./LDCT-and-Projection-data/N127/12-23-2021-NA-NA-04374/1.000000-Low Dose
+    Images-22335
+  n_slices: 36
+  target: ./LDCT-and-Projection-data/N127/12-23-2021-NA-NA-04374/1.000000-Full Dose
+    Images-20851
+- id: N012
+  input: ./LDCT-and-Projection-data/N012/12-23-2021-NA-NA-36085/1.000000-Low Dose
+    Images-40756
+  n_slices: 40
+  target: ./LDCT-and-Projection-data/N012/12-23-2021-NA-NA-36085/1.000000-Full Dose
+    Images-20199
+- id: N030
+  input: ./LDCT-and-Projection-data/N030/12-23-2021-NA-NA-22477/1.000000-Low Dose
+    Images-61899
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N030/12-23-2021-NA-NA-22477/1.000000-Full Dose
+    Images-94120
+val_set:
+- id: C202
+  input: ./LDCT-and-Projection-data/C202/12-23-2021-NA-NA-25107/1.000000-Low Dose
+    Images-53118
+  n_slices: 326
+  target: ./LDCT-and-Projection-data/C202/12-23-2021-NA-NA-25107/1.000000-Full Dose
+    Images-51842
+- id: C219
+  input: ./LDCT-and-Projection-data/C219/12-23-2021-NA-NA-61692/1.000000-Low Dose
+    Images-20555
+  n_slices: 344
+  target: ./LDCT-and-Projection-data/C219/12-23-2021-NA-NA-61692/1.000000-Full Dose
+    Images-00225
+- id: C227
+  input: ./LDCT-and-Projection-data/C227/12-23-2021-NA-NA-61334/1.000000-Low Dose
+    Images-62390
+  n_slices: 303
+  target: ./LDCT-and-Projection-data/C227/12-23-2021-NA-NA-61334/1.000000-Full Dose
+    Images-23888
+- id: C258
+  input: ./LDCT-and-Projection-data/C258/12-23-2021-NA-NA-72705/1.000000-Low Dose
+    Images-92520
+  n_slices: 322
+  target: ./LDCT-and-Projection-data/C258/12-23-2021-NA-NA-72705/1.000000-Full Dose
+    Images-03288
+- id: C067
+  input: ./LDCT-and-Projection-data/C067/12-23-2021-NA-NA-00111/1.000000-Low Dose
+    Images-84181
+  n_slices: 365
+  target: ./LDCT-and-Projection-data/C067/12-23-2021-NA-NA-00111/1.000000-Full Dose
+    Images-63211
+- id: C295
+  input: ./LDCT-and-Projection-data/C295/12-23-2021-NA-NA-11588/1.000000-Low Dose
+    Images-60099
+  n_slices: 303
+  target: ./LDCT-and-Projection-data/C295/12-23-2021-NA-NA-11588/1.000000-Full Dose
+    Images-18696
+- id: C190
+  input: ./LDCT-and-Projection-data/C190/12-23-2021-NA-NA-41640/1.000000-Low Dose
+    Images-62068
+  n_slices: 303
+  target: ./LDCT-and-Projection-data/C190/12-23-2021-NA-NA-41640/1.000000-Full Dose
+    Images-61820
+- id: C232
+  input: ./LDCT-and-Projection-data/C232/12-23-2021-NA-NA-31854/1.000000-Low Dose
+    Images-34097
+  n_slices: 353
+  target: ./LDCT-and-Projection-data/C232/12-23-2021-NA-NA-31854/1.000000-Full Dose
+    Images-62783
+- id: C052
+  input: ./LDCT-and-Projection-data/C052/12-23-2021-NA-NA-14363/1.000000-Low Dose
+    Images-92104
+  n_slices: 342
+  target: ./LDCT-and-Projection-data/C052/12-23-2021-NA-NA-14363/1.000000-Full Dose
+    Images-53576
+- id: C107
+  input: ./LDCT-and-Projection-data/C107/12-23-2021-NA-NA-91033/1.000000-Low Dose
+    Images-31911
+  n_slices: 391
+  target: ./LDCT-and-Projection-data/C107/12-23-2021-NA-NA-91033/1.000000-Full Dose
+    Images-50880
+- id: L033
+  input: ./LDCT-and-Projection-data/L033/12-23-2021-NA-NA-20514/1.000000-Low Dose
+    Images-30854
+  n_slices: 162
+  target: ./LDCT-and-Projection-data/L033/12-23-2021-NA-NA-20514/1.000000-Full Dose
+    Images-12321
+- id: L187
+  input: ./LDCT-and-Projection-data/L187/12-23-2021-NA-NA-19391/1.000000-Low Dose
+    Images-04062
+  n_slices: 131
+  target: ./LDCT-and-Projection-data/L187/12-23-2021-NA-NA-19391/1.000000-Full Dose
+    Images-00406
+- id: L123
+  input: ./LDCT-and-Projection-data/L123/12-23-2021-NA-NA-92914/1.000000-Low Dose
+    Images-12769
+  n_slices: 151
+  target: ./LDCT-and-Projection-data/L123/12-23-2021-NA-NA-92914/1.000000-Full Dose
+    Images-30551
+- id: L058
+  input: ./LDCT-and-Projection-data/L058/12-23-2021-NA-NA-00405/1.000000-Low Dose
+    Images-81097
+  n_slices: 210
+  target: ./LDCT-and-Projection-data/L058/12-23-2021-NA-NA-00405/1.000000-Full Dose
+    Images-41349
+- id: L212
+  input: ./LDCT-and-Projection-data/L212/12-23-2021-NA-NA-70508/1.000000-Low Dose
+    Images-62062
+  n_slices: 204
+  target: ./LDCT-and-Projection-data/L212/12-23-2021-NA-NA-70508/1.000000-Full Dose
+    Images-30772
+- id: L077
+  input: ./LDCT-and-Projection-data/L077/12-23-2021-NA-NA-04228/1.000000-Low Dose
+    Images-08710
+  n_slices: 161
+  target: ./LDCT-and-Projection-data/L077/12-23-2021-NA-NA-04228/1.000000-Full Dose
+    Images-10282
+- id: L179
+  input: ./LDCT-and-Projection-data/L179/12-23-2021-NA-NA-62118/1.000000-Low Dose
+    Images-81303
+  n_slices: 143
+  target: ./LDCT-and-Projection-data/L179/12-23-2021-NA-NA-62118/1.000000-Full Dose
+    Images-13229
+- id: L014
+  input: ./LDCT-and-Projection-data/L014/12-23-2021-NA-NA-83637/1.000000-Low Dose
+    Images-22253
+  n_slices: 154
+  target: ./LDCT-and-Projection-data/L014/12-23-2021-NA-NA-83637/1.000000-Full Dose
+    Images-28591
+- id: L186
+  input: ./LDCT-and-Projection-data/L186/12-23-2021-NA-NA-64264/1.000000-Low Dose
+    Images-36537
+  n_slices: 167
+  target: ./LDCT-and-Projection-data/L186/12-23-2021-NA-NA-64264/1.000000-Full Dose
+    Images-23298
+- id: L193
+  input: ./LDCT-and-Projection-data/L193/12-23-2021-NA-NA-72340/1.000000-Low Dose
+    Images-27667
+  n_slices: 169
+  target: ./LDCT-and-Projection-data/L193/12-23-2021-NA-NA-72340/1.000000-Full Dose
+    Images-23274
+- id: N056
+  input: ./LDCT-and-Projection-data/N056/12-23-2021-NA-NA-32551/1.000000-Low Dose
+    Images-44164
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N056/12-23-2021-NA-NA-32551/1.000000-Full Dose
+    Images-60654
+- id: N024
+  input: ./LDCT-and-Projection-data/N024/12-23-2021-NA-NA-13377/1.000000-Low Dose
+    Images-00530
+  n_slices: 32
+  target: ./LDCT-and-Projection-data/N024/12-23-2021-NA-NA-13377/1.000000-Full Dose
+    Images-01203
+- id: N079
+  input: ./LDCT-and-Projection-data/N079/12-23-2021-NA-NA-24218/1.000000-Low Dose
+    Images-33316
+  n_slices: 37
+  target: ./LDCT-and-Projection-data/N079/12-23-2021-NA-NA-24218/1.000000-Full Dose
+    Images-91433
+- id: N139
+  input: ./LDCT-and-Projection-data/N139/12-23-2021-NA-NA-73360/1.000000-Low Dose
+    Images-21188
+  n_slices: 32
+  target: ./LDCT-and-Projection-data/N139/12-23-2021-NA-NA-73360/1.000000-Full Dose
+    Images-50716
+- id: N300
+  input: ./LDCT-and-Projection-data/N300/12-23-2021-NA-NA-83925/1.000000-Low Dose
+    Images-73259
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N300/12-23-2021-NA-NA-83925/1.000000-Full Dose
+    Images-05243
+- id: N198
+  input: ./LDCT-and-Projection-data/N198/12-23-2021-NA-NA-64101/1.000000-Low Dose
+    Images-42938
+  n_slices: 33
+  target: ./LDCT-and-Projection-data/N198/12-23-2021-NA-NA-64101/1.000000-Full Dose
+    Images-02233
+- id: N279
+  input: ./LDCT-and-Projection-data/N279/12-23-2021-NA-NA-13389/1.000000-Low Dose
+    Images-23473
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N279/12-23-2021-NA-NA-13389/1.000000-Full Dose
+    Images-73801
+- id: N047
+  input: ./LDCT-and-Projection-data/N047/12-23-2021-NA-NA-00830/1.000000-Low Dose
+    Images-10816
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N047/12-23-2021-NA-NA-00830/1.000000-Full Dose
+    Images-16753
+- id: N188
+  input: ./LDCT-and-Projection-data/N188/12-23-2021-NA-NA-00705/1.000000-Low Dose
+    Images-08349
+  n_slices: 35
+  target: ./LDCT-and-Projection-data/N188/12-23-2021-NA-NA-00705/1.000000-Full Dose
+    Images-43217
+- id: N252
+  input: ./LDCT-and-Projection-data/N252/12-23-2021-NA-NA-53296/1.000000-Low Dose
+    Images-41889
+  n_slices: 34
+  target: ./LDCT-and-Projection-data/N252/12-23-2021-NA-NA-53296/1.000000-Full Dose
+    Images-64219

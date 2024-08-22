@@ -1,0 +1,17 @@
+adam_b1: 0.9
+adam_b2: 0.999
+cuda: true
+data_norm: meanstd
+data_subset: 1.
+devices: 0
+dryrun: false
+max_iterations: 20000
+iterations_before_val: 1000
+lr: 0.0001
+mbs: 64
+num_workers: 8
+optimizer: adam
+patchsize: 64
+seed: 1332
+trainer: resnet
+valsamples: 8

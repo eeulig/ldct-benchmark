@@ -1,0 +1,10 @@
+name: verify pull request
+run-name: Verify pull request 🧪
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  verify-test:
+    uses: ./.github/workflows/verify_test.yml

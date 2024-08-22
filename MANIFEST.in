@@ -1,0 +1,2 @@
+include ldctbench/data/info.yml
+include ldctbench/hub/checkpoints.json

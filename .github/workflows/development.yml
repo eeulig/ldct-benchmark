@@ -1,0 +1,22 @@
+name: development
+run-name: Deploy development 🚀 and 📝
+
+on:
+  push:
+    branches: ["main"]
+
+permissions:
+  contents: write
+
+jobs:
+  verify-test:
+    uses: ./.github/workflows/verify_test.yml
+  
+  version-bump:
+    uses: ./.github/workflows/bump_version.yml
+    with:
+      bump-type: patch
+  
+  build-docs:
+    uses: ./.github/workflows/build_dev_docs.yml
+    needs: ["verify-test", "version-bump"]
