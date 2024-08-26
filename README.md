@@ -30,15 +30,15 @@ However, authors of each method employ their own training, validation, and test 
 
 **Inadequate metrics:** Most LDCT denoising methods are evaluated using SSIM, peak signal-to-noise ratio (PSNR), or root-mean-square error (RMSE). While these are common metrics to quantify performance for natural image denoising, they are usually not in agreement with human readers for medical images.
 
-> Therefore, the aim of this project is to 
+
+Therefore, the **aim** of this project is to
 >   
-> 1. provide a unified benchmark suite which serves as a reference for existing LDCT denoising algorithms (including optimal hyperparameters) and allows for a fair and reproducible comparison of new methods.
-> 2. make these algorithms easily accessible for practitioners by providing the trained models together with utility functions to denoise CT images.
-> 3. establish novel metrics for the evaluation of LDCT denoising algorithms.
+1. provide a unified benchmark suite which serves as a reference for existing LDCT denoising algorithms (including optimal hyperparameters) and allows for a fair and reproducible comparison of new methods.
+2. make these algorithms easily accessible for practitioners by providing the trained models together with utility functions to denoise CT images.
+3. establish novel metrics for the evaluation of LDCT denoising algorithms.
 
 [^1]: C. H. McCollough, A. C. Bartley, R. E. Carter, B. Chen, T. A. Drees, P. Edwards, D. R. Holmes III, A. E. Huang, F. Khan, S. Leng, K. L. McMillan, G. J. Michalak, K. M. Nunez, L. Yu, and J. G. Fletcher, “Low-dose CT for the detection and classification of metastatic liver lesions: Results of the 2016 Low Dose CT Grand Challenge”, Medical Physics, vol. 44, no. 10, pp. e339–e352, 2017
-[^2]: C. McCollough, B. Chen, D. R. Holmes III, X. Duan, Z. Yu, L. Yu, S. Leng, and J. Fletcher, “Low dose CT image and projection data”, 2020.
-
+[^2]: McCollough, C., Chen, B., Holmes III, D. R., Duan, X., Yu, Z., Yu, L., Leng, S., & Fletcher, J. (2020). Low Dose CT Image and Projection Data (LDCT-and-Projection-data) (Version 6) [Data set]. The Cancer Imaging Archive. <https://doi.org/10.7937/9NPB-2637>.
 
 ## Documentation
 Please read our [documentation](https://eeulig.github.io/ldct-benchmark/dev/) for details on installation and usage of this project.

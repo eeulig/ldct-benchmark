@@ -32,7 +32,7 @@ Therefore, the aim of this project is to
 3. establish novel metrics for the evaluation of LDCT denoising algorithms.
 
 [^1]: C. H. McCollough, A. C. Bartley, R. E. Carter, B. Chen, T. A. Drees, P. Edwards, D. R. Holmes III, A. E. Huang, F. Khan, S. Leng, K. L. McMillan, G. J. Michalak, K. M. Nunez, L. Yu, and J. G. Fletcher, “Low-dose CT for the detection and classification of metastatic liver lesions: Results of the 2016 Low Dose CT Grand Challenge”, Medical Physics, vol. 44, no. 10, pp. e339–e352, 2017
-[^2]: C. McCollough, B. Chen, D. R. Holmes III, X. Duan, Z. Yu, L. Yu, S. Leng, and J. Fletcher, “Low dose CT image and projection data”, 2020.
+[^2]: McCollough, C., Chen, B., Holmes III, D. R., Duan, X., Yu, Z., Yu, L., Leng, S., & Fletcher, J. (2020). Low Dose CT Image and Projection Data (LDCT-and-Projection-data) (Version 6) [Data set]. The Cancer Imaging Archive. <https://doi.org/10.7937/9NPB-2637>.
 
 ## Contribute an algorithm
 We welcome contributions of novel denoising algorithms. For details on how to do so, please check out our [contributing guide](https://github.com/eeulig/ldct-benchmark/blob/main/CONTRIBUTING.md){:target="_blank"} or reach out to [me](mailto:elias.eulig@dkfz.de).

@@ -33,7 +33,7 @@ If you want to implement your own methods or contribute to the project, you shou
 Our benchmark uses the Low Dose CT and Projection data[^1] which is available from the [Cancer Imaging Archive (TCIA)](https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/){:target="_blank"}. For downloading the data, please follow the instructions below.
 
 
-[^1]: C. McCollough, B. Chen, D. R. Holmes III, X. Duan, Z. Yu, L. Yu, S. Leng, and J. Fletcher, “Low dose CT image and projection data”, 2020.
+[^1]: McCollough, C., Chen, B., Holmes III, D. R., Duan, X., Yu, Z., Yu, L., Leng, S., & Fletcher, J. (2020). Low Dose CT Image and Projection Data (LDCT-and-Projection-data) (Version 6) [Data set]. The Cancer Imaging Archive. <https://doi.org/10.7937/9NPB-2637>.
 
 ### 1. Sign a TCIA license agreement
 You must sign and submit a TCIA Restricted License Agreement to download the data. Information on how to do this is provided under "Data Access" [here](https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/){:target="_blank"}.
