@@ -4,10 +4,18 @@ from pathlib import Path
 
 import mkdocs_gen_files
 
+EXCLUDE = [
+    "ldctbench/scripts/download_data.py",
+    "ldctbench/scripts/train.py",
+    "ldctbench/scripts/test.py",
+]
+
 nav = mkdocs_gen_files.Nav()
 
 for path in sorted(Path("ldctbench").rglob("*.py")):
     if path.name[0] == "_":
+        continue
+    if str(path) in EXCLUDE:
         continue
 
     module_path = path.relative_to(".").with_suffix("")

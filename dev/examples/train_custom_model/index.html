@@ -1605,7 +1605,7 @@
 </ul>
 </li>
 <li>
-<p>Add the method to <code>METHODS</code> in <code>argparser.py</code>.</p>
+<p>Add the method to <code>METHODS</code> in <code>ldctbench/utils/argparser.py</code>.</p>
 </li>
 </ol>
 <p>Let's say we want to implement a method called <code>simplecnn</code> which is just a shallow 3-layer CNN. For this, the folder <code>ldctbench/methods/simplecnn</code> should contain the following files:</p>
@@ -1684,8 +1684,8 @@
 </div>
 </div>
 </div>
-<p>Additionally, we have to change <code>METHODS</code> in <code>ldctbench/argparser.py</code> to include the new method:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ldctbench/argparser.py</label></div>
+<p>Additionally, we have to change <code>METHODS</code> in <code>ldctbench/utils/argparser.py</code> to include the new method:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:1"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">ldctbench/utils/argparser.py</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
 <div class="language-python highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="o">...</span>
@@ -1707,10 +1707,10 @@
 </div>
 <h2 id="train-a-method">Train a method</h2>
 <p>You can train the method using
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>python<span class="w"> </span>train.py<span class="w"> </span>--arg1<span class="w"> </span>val1<span class="w"> </span>--arg2<span class="w"> </span>val2
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>ldctbench-train<span class="w"> </span>--arg1<span class="w"> </span>val1<span class="w"> </span>--arg2<span class="w"> </span>val2
 </span></code></pre></div>
 or, alternatively
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>python<span class="w"> </span>train.py<span class="w"> </span>--config<span class="w"> </span>configs/&lt;method&gt;.yaml
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>ldctbench-train<span class="w"> </span>--config<span class="w"> </span>configs/&lt;method&gt;.yaml
 </span></code></pre></div>
 if a <code>.yaml</code> file containing all necessary arguments to run the method is provided in <code>configs/</code>.</p>
 <p>Let us now train the <code>simplecnn</code> method with the following config file that we place in <code>configs/</code></p>
@@ -1741,10 +1741,10 @@ if a <code>.yaml</code> file containing all necessary arguments to run the metho
 </div>
 </div>
 <p>Training the method is then done by running
-<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>python<span class="w"> </span>train.py<span class="w"> </span>--config<span class="w"> </span>configs/simplecnn.yaml
+<div class="language-shell highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>ldctbench-train<span class="w"> </span>--config<span class="w"> </span>configs/simplecnn.yaml
 </span></code></pre></div>
 and should take approximately 25 minutes on a single GPU.
-The training logs are stored to a folder <code>wandb/offline-run-&lt;timestamp&gt;/files</code>. Let's have a look at the plot of training and validation loss that we find in that folder:</p>
+The training logs are stored to a folder <code>./wandb/offline-run-&lt;timestamp&gt;/files</code> (relative to the folder from which <code>ldctbench-train</code> was called). Let's have a look at the plot of training and validation loss that we find in that folder:</p>
 <figure>
   <img alt="Image title" src="../../assets/loss_curves.png" width="500" />
   <figcaption>Training and validation loss for the 'simplecnn' method</figcaption>

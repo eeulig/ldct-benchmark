@@ -343,9 +343,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from-pypi-coming-soon" class="md-nav__link">
+  <a href="#from-pypi" class="md-nav__link">
     <span class="md-ellipsis">
-      From PyPI (coming soon)
+      From PyPI
     </span>
   </a>
   
@@ -419,9 +419,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-a-script-recommended" class="md-nav__link">
+  <a href="#using-the-script-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Using a script (recommended)
+      Using the script (recommended)
     </span>
   </a>
   
@@ -1688,9 +1688,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#from-pypi-coming-soon" class="md-nav__link">
+  <a href="#from-pypi" class="md-nav__link">
     <span class="md-ellipsis">
-      From PyPI (coming soon)
+      From PyPI
     </span>
   </a>
   
@@ -1764,9 +1764,9 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#using-a-script-recommended" class="md-nav__link">
+  <a href="#using-the-script-recommended" class="md-nav__link">
     <span class="md-ellipsis">
-      Using a script (recommended)
+      Using the script (recommended)
     </span>
   </a>
   
@@ -1845,7 +1845,7 @@
 <h1 id="getting-started">Getting started</h1>
 <h2 id="installation">Installation</h2>
 <p>Set up a new environment with Python 3.10 or higher. We recommend using a virtual environment to avoid conflicts with other packages.</p>
-<h3 id="from-pypi-coming-soon">From PyPI (coming soon)</h3>
+<h3 id="from-pypi">From <a href="https://pypi.org/project/ldct-benchmark/" target="_blank">PyPI</a></h3>
 <div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install ldct-benchmark
 </span></code></pre></div>
 <h3 id="from-github">From GitHub</h3>
@@ -1874,9 +1874,9 @@
 <p>You must sign and submit a TCIA Restricted License Agreement to download the data. Information on how to do this is provided under "Data Access" <a href="https://www.cancerimagingarchive.net/collection/ldct-and-projection-data/" target="_blank">here</a>.</p>
 <h3 id="2-download-the-ldct-data">2. Download the LDCT data</h3>
 <p>Download <strong>Version 3</strong> of the LDCT and Projection Data. We provide the <code>.tcia</code> object containing only the Siemens image-domain data (~27 GB) in <code>assets/manifest.tcia</code>.</p>
-<h4 id="using-a-script-recommended">Using a script (recommended)</h4>
-<p>We provide a script to download the data in <code>download_data.py</code>. Run the following command to download the data to <code>/path/to/datafolder</code>. You must provide your TCIA username and password to access the data:</p>
-<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>python<span class="w"> </span>download_data.py<span class="w"> </span>--savedir<span class="w"> </span>/path/to/datafolder<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;<span class="w"> </span>--password<span class="w"> </span>&lt;password&gt;
+<h4 id="using-the-script-recommended">Using the script (recommended)</h4>
+<p>We provide a script to download all the required data to use the benchmark. Run the following command to download the data to <code>/path/to/datafolder</code>. You must provide your TCIA username and password to access the data:</p>
+<div class="language-sh highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ldctbench-download-data<span class="w"> </span>--savedir<span class="w"> </span>/path/to/datafolder<span class="w"> </span>--username<span class="w"> </span>&lt;username&gt;<span class="w"> </span>--password<span class="w"> </span>&lt;password&gt;
 </span></code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1896,7 +1896,7 @@ with <code>&lt;username&gt;</code> and <code>&lt;password&gt;</code> being your 
 <p>For training and testing the models on the LDCT data you need to set the environment variable <code>LDCTBENCH_DATAFOLDER</code> to the path of the downloaded data folder. You can do this by running the following command:
 <div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>export LDCTBENCH_DATAFOLDER=path/to/ldct-data
 </span></code></pre></div>
-where <code>path/to/ldct-data</code> is the path to the downloaded data folder. Alternatively, you can provide the path to the data folder in the <code>config.yaml</code> file or via the argument <code>--datafolder</code> when running the scripts.</p>
+where <code>path/to/ldct-data</code> is the path to the downloaded data folder. Alternatively, you can provide the path to the data folder in the <code>config.yaml</code> file for training models or via the argument <code>--datafolder</code> when training/testing models.</p>
 <div class="footnote">
 <hr />
 <ol>
