@@ -25,7 +25,7 @@ We found that LDCT denoising algorithms proposed in the literature are difficult
 !!! danger "Inadequate metrics"
      Most LDCT denoising methods are evaluated using SSIM, peak signal-to-noise ratio (PSNR), or root-mean-square error (RMSE). While these are common metrics to quantify performance for natural image denoising, they are usually not in agreement with human readers for medical images.
 
-Therefore, the aim of this project is to 
+Therefore, the **aim** of this project is to 
     
 1. provide a unified benchmark suite which serves as a reference for existing LDCT denoising algorithms (including optimal hyperparameters) and allows for a fair and reproducible comparison of new methods.
 2. make these algorithms easily accessible for practitioners by providing the trained models together with utility functions to denoise CT images.

@@ -10,7 +10,7 @@ authors = [
 ]
 description = "A benchmark for deep learning-based low dose CT image denoising"
 requires-python = ">=3.10"
-readme = "README.md"
+readme = "README_PYPI.md"
 dependencies = [
   "PyYAML",
   "wandb",
@@ -40,6 +40,10 @@ docs = [
     "mkdocs-gen-files",
     "mike",
 ]
+[project.scripts]
+ldctbench-download-data = "ldctbench.scripts.download_data:main"
+ldctbench-train = "ldctbench.scripts.train:main"
+ldctbench-test = "ldctbench.scripts.test:main"
 
 [tool.setuptools.packages.find]
 include = ["ldctbench*"]

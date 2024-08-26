@@ -16,7 +16,7 @@ To add a custom method to the benchmark suite we must follow these steps:
     - `network.py`: Should implement the model as `class Model(torch.nn.Module)`.
     - `Trainer.py`: Should imeplement a `Trainer` class. This class should be initialized with `Trainer(args: argparse.Namespace, device: torch.device)` and implement a `fit()` method that trains the network. A base class is provided in `methods/base.py`.
 
-2. Add the method to `METHODS` in `argparser.py`.
+2. Add the method to `METHODS` in `ldctbench/utils/argparser.py`.
 
 Let's say we want to implement a method called `simplecnn` which is just a shallow 3-layer CNN. For this, the folder `ldctbench/methods/simplecnn` should contain the following files:
 
@@ -93,9 +93,9 @@ Let's say we want to implement a method called `simplecnn` which is just a shall
     # An empty file
     ```
 
-Additionally, we have to change `METHODS` in `ldctbench/argparser.py` to include the new method:
+Additionally, we have to change `METHODS` in `ldctbench/utils/argparser.py` to include the new method:
 
-=== "ldctbench/argparser.py"
+=== "ldctbench/utils/argparser.py"
     ```python
     ...
     METHODS = [
@@ -115,11 +115,11 @@ Additionally, we have to change `METHODS` in `ldctbench/argparser.py` to include
 ## Train a method
 You can train the method using
 ```shell
-python train.py --arg1 val1 --arg2 val2
+ldctbench-train --arg1 val1 --arg2 val2
 ```
 or, alternatively
 ```shell
-python train.py --config configs/<method>.yaml
+ldctbench-train --config configs/<method>.yaml
 ```
 if a `.yaml` file containing all necessary arguments to run the method is provided in `configs/`.
 
@@ -149,10 +149,10 @@ Let us now train the `simplecnn` method with the following config file that we p
 
 Training the method is then done by running
 ```shell
-python train.py --config configs/simplecnn.yaml
+ldctbench-train --config configs/simplecnn.yaml
 ```
 and should take approximately 25 minutes on a single GPU.
-The training logs are stored to a folder `wandb/offline-run-<timestamp>/files`. Let's have a look at the plot of training and validation loss that we find in that folder:
+The training logs are stored to a folder `./wandb/offline-run-<timestamp>/files` (relative to the folder from which `ldctbench-train` was called). Let's have a look at the plot of training and validation loss that we find in that folder:
 
 <figure markdown="span">
   ![Image title](../assets/loss_curves.png){ width="500" }

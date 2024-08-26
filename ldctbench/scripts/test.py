@@ -13,7 +13,8 @@ from ldctbench.data import TestData
 from ldctbench.hub import Methods, load_model
 from ldctbench.utils import compute_metric, save_raw, save_yaml, setup_trained_model
 
-if __name__ == "__main__":
+
+def main():
     # Commandline Arguments
     parser = argparse.ArgumentParser()
     parser.add_argument(
@@ -49,7 +50,7 @@ if __name__ == "__main__":
     )
     parser.add_argument(
         "--results_dir",
-        default="results/",
+        default="./results/",
         help="Folder where to store results.",
     )
     parser.add_argument(
@@ -215,3 +216,7 @@ if __name__ == "__main__":
             },
         }
         print(tabulate(results_avg, headers="keys", tablefmt="github"))
+
+
+if __name__ == "__main__":
+    main()

@@ -8,9 +8,9 @@
     Please refer to [Getting Started](../getting_started.md) for instructions on how to do these steps.
 
 ## Test script 
-Evaluating some model on the test data split of the LDCT data is as simple as running `python test.py` with the following arguments:
+Evaluating some model on the test data split of the LDCT data is as simple as running `ldctbench-test` with the following arguments:
 ```
-usage: test.py [-h] [--methods METHODS [METHODS ...]] [--metrics METRICS [METRICS ...]] [--datafolder DATAFOLDER] [--data_norm DATA_NORM] [--results_dir RESULTS_DIR] [--device DEVICE] [--print_table]
+usage: ldctbench-test [-h] [--methods METHODS [METHODS ...]] [--metrics METRICS [METRICS ...]] [--datafolder DATAFOLDER] [--data_norm DATA_NORM] [--results_dir RESULTS_DIR] [--device DEVICE] [--print_table]
 
 optional arguments:
   -h, --help            show this help message and exit
@@ -27,32 +27,32 @@ optional arguments:
   --device DEVICE       CUDA device id.
   --print_table         Print results in table.
 ```
-The argument `--datafolder` can be omitted if the environemnt variable `LDCTBENCH_DATAFOLDER` is set accordingly (see [here][3-set-environment-variable-to-the-data-folder]).
+The argument `--datafolder` can be omitted if the environment variable `LDCTBENCH_DATAFOLDER` is set accordingly (see [here][3-set-environment-variable-to-the-data-folder]).
 
 
 ## Evaluate pretrained models
 To test the pretrained CNN-10 and measure SSIM and PSNR, we would run:
 
 ```shell
-python test.py --methods cnn10 --metrics SSIM PSNR --datafolder path/to/ldct-data
+ldctbench-test --methods cnn10 --metrics SSIM PSNR --datafolder path/to/ldct-data
 ```
 or 
 ```shell
-python test.py --methods cnn10 --metrics SSIM PSNR
+ldctbench-test --methods cnn10 --metrics SSIM PSNR
 ```
 if the environment variable `LDCTBENCH_DATAFOLDER` is set.
 
-By default, results are stored in `results/test_metrics.yaml`. To print them in a markdown table, we can add `--print_table`. To reproduce [this table][test-set-performance], we can run:
+By default, results are stored in `./results/test_metrics.yaml`. To print them in a markdown table, we can add `--print_table`. To reproduce [this table][test-set-performance], we can run:
 ```shell
-python test.py --datafolder path/to/ldct-data --print_table
+ldctbench-test --datafolder path/to/ldct-data --print_table
 ```
 
 ## Evaluate custom trained models
-To test a custom trained model we can provide the wandb run name as `--method` instead.
+To test a custom trained model we can provide the wandb run name as `--method` instead if the `wandb` folder with training logs is in the same directory from which `ldctbench-test` is called.
 
 Evaluating the model trained in the [previous example](train_custom_model.md) with:
 ```shell
-python test.py --methods offline-run-<timestamp> --metrics PSNR SSIM --print_table
+ldctbench-test --methods offline-run-<timestamp> --metrics PSNR SSIM --print_table
 ```
 will print the following table
 

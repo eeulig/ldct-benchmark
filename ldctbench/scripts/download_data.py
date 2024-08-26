@@ -96,7 +96,7 @@ def download_series(series: str, savedir: str):
     metadata_df = pd.concat([metadata_df, pd.DataFrame(metadata)], ignore_index=True)
 
 
-if __name__ == "__main__":
+def main():
     # This script can be used to download the LDCT and Projection data using tcia_utils.
     # Some of the code herein is heavily inspired by the tcia-utils python package
     # (https://github.com/kirbyju/tcia_utils). We do this to reduce package dependencies
@@ -137,3 +137,7 @@ if __name__ == "__main__":
         download_series(series=series, savedir=opt.savedir)
         # Update manifest file
         metadata_df.to_csv(metadata_path)
+
+
+if __name__ == "__main__":
+    main()

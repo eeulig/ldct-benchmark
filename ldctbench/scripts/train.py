@@ -11,7 +11,7 @@ import torch
 import wandb
 
 import ldctbench.utils.auxiliaries as aux
-from argparser import make_parser, use_config
+from ldctbench.utils.argparser import make_parser, use_config
 
 matplotlib.use("Agg")
 
@@ -76,7 +76,7 @@ def train(args):
     trainer.fit()
 
 
-if __name__ == "__main__":
+def main():
     parser = make_parser()
     args = parser.parse_args()
     args = use_config(args)
@@ -95,3 +95,7 @@ if __name__ == "__main__":
         os.environ["WANDB_MODE"] = "dryrun"
 
     train(args)
+
+
+if __name__ == "__main__":
+    main()

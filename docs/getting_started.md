@@ -3,7 +3,7 @@
 ## Installation
 Set up a new environment with Python 3.10 or higher. We recommend using a virtual environment to avoid conflicts with other packages.
 
-### From PyPI (coming soon)
+### From [PyPI](https://pypi.org/project/ldct-benchmark/){:target="_blank"}
 ```
 pip install ldct-benchmark
 ```
@@ -41,11 +41,11 @@ You must sign and submit a TCIA Restricted License Agreement to download the dat
 ### 2. Download the LDCT data
 Download **Version 3** of the LDCT and Projection Data. We provide the `.tcia` object containing only the Siemens image-domain data (~27 GB) in `assets/manifest.tcia`.
 
-#### Using a script (recommended)
-We provide a script to download the data in `download_data.py`. Run the following command to download the data to `/path/to/datafolder`. You must provide your TCIA username and password to access the data:
+#### Using the script (recommended)
+We provide a script to download all the required data to use the benchmark. Run the following command to download the data to `/path/to/datafolder`. You must provide your TCIA username and password to access the data:
 
 ```sh
-python download_data.py --savedir /path/to/datafolder --username <username> --password <password>
+ldctbench-download-data --savedir /path/to/datafolder --username <username> --password <password>
 ```
 !!! info
     If your username or password contains special characters, you may need to enclose them in single quotes:
@@ -69,4 +69,4 @@ For training and testing the models on the LDCT data you need to set the environ
 ```
 export LDCTBENCH_DATAFOLDER=path/to/ldct-data
 ```
-where `path/to/ldct-data` is the path to the downloaded data folder. Alternatively, you can provide the path to the data folder in the `config.yaml` file or via the argument `--datafolder` when running the scripts.
+where `path/to/ldct-data` is the path to the downloaded data folder. Alternatively, you can provide the path to the data folder in the `config.yaml` file for training models or via the argument `--datafolder` when training/testing models.
