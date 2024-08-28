@@ -1,37 +1,37 @@
 from ldctbench.hub import Methods, load_model
 
 
-def test_laod_cnn10():
+def test_load_cnn10():
     net = load_model(Methods.CNN10)
     assert net
 
 
-def test_laod_redcnn():
+def test_load_redcnn():
     net = load_model(Methods.REDCNN)
     assert net
 
 
-def test_laod_wganvgg():
+def test_load_wganvgg():
     net = load_model(Methods.WGANVGG)
     assert net
 
 
-def test_laod_resnet():
+def test_load_resnet():
     net = load_model(Methods.RESNET)
     assert net
 
 
-def test_laod_qae():
+def test_load_qae():
     net = load_model(Methods.QAE)
     assert net
 
 
-def test_laod_dugan():
+def test_load_dugan():
     net = load_model(Methods.DUGAN)
     assert net
 
 
-def test_laod_transct():
+def test_load_transct():
     net = load_model(Methods.TRANSCT)
     assert net
 
