@@ -38,7 +38,7 @@ Therefore, the **aim** of this project is to
 We welcome contributions of novel denoising algorithms. For details on how to do so, please check out our [contributing guide](https://github.com/eeulig/ldct-benchmark/blob/main/CONTRIBUTING.md){:target="_blank"} or reach out to [me](mailto:elias.eulig@dkfz.de).
 
 ## Reference
-If you find this project useful for you work, please cite our [arXiv preprint](https://arxiv.org/abs/2401.04661){:target="_blank"}:
+If you find this project useful for your work, please cite our [arXiv preprint](https://arxiv.org/abs/2401.04661){:target="_blank"}:
 > Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low Dose CT Image Denoising Algorithms. arXiv, 2401.04661.
 
 ```bibtex

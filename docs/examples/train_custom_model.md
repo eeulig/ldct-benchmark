@@ -155,6 +155,6 @@ and should take approximately 25 minutes on a single GPU.
 The training logs are stored to a folder `./wandb/offline-run-<timestamp>/files` (relative to the folder from which `ldctbench-train` was called). Let's have a look at the plot of training and validation loss that we find in that folder:
 
 <figure markdown="span">
-  ![Image title](../assets/loss_curves.png){ width="500" }
+  ![Loss curves](../assets/loss_curves.png){ width="500" }
   <figcaption>Training and validation loss for the 'simplecnn' method</figcaption>
 </figure>
