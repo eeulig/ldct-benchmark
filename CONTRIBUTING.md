@@ -3,14 +3,22 @@
 Thank you for your interest in contributing! Here are some guidelines:
 
 ## Installation
-Install the package locally using pip and in interactive mode. This way, you can immediately test your changes to the codebase.
+Install the package locally using pip and in editable mode. This way, you can immediately test your changes to the codebase.
 ```bash
-pip install -e .[dev]
+pip install -e .[dev,docs]
 ```
 
+## Updating the documentation
+The documentation is built using [MkDocs](https://www.mkdocs.org/). To build the documentation locally, run:
+```bash
+mkdocs serve
+```
+Please make sure that all markdown is rendered correctly, and all links are working.
+
 ## Contributing denoising algorithms
-1. Create a branch `git checkout -b method/fancy-method` for your new method.
-2. Create a folder for the new method in `ldctbench/methods`. The folder must contain the following files
+1. Fork and clone this repository
+2. Create a branch `git checkout -b method/fancy-method` for your new method.
+3. Create a folder for the new method in `ldctbench/methods`. The folder must contain the following files
     - `__init__.py`
     - `argparser.py`: Should implement a method `add_args()` that takes as input an `argparse.ArgumentParser`, adds custom arguments and returns it. If your method has an argument `fancy_arg`, then `argparser.py` should look like this:
         ```python
@@ -28,12 +36,13 @@ pip install -e .[dev]
         ```
     - `network.py`: Should implement the model as `class Model(torch.nn.Module)`.
     - `Trainer.py`: Should imeplement a `Trainer` class. This class should be initialized with `Trainer(args: argparse.Namespace, device: torch.device)` and implement a `fit()` method that trains the network. A base class is provided in `methods/base.py`.
-3. Add the method to `METHODS` in `argparser.py`.
-4. Add the method to `docs/denoising_algorithms.md`.
-5. Add a `fancy-method.yaml` config file containing all hyperparameters to `configs/`.
+4. Add the method to `METHODS` in `argparser.py`.
+5. Add the method to `docs/denoising_algorithms.md`.
+6. Add a `fancy-method.yaml` config file containing all hyperparameters to `configs/`.
 
 ## Contributing other features or bug fixes
-1. Create a new branch based on your change type:
+1. Fork and clone this repository
+2. Create a new branch based on your change type:
     - `fix/some-fix` for bug fixes
     - `feat/some-feature` for adding new features
 

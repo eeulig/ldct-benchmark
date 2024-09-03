@@ -102,7 +102,7 @@ def main():
     # (https://github.com/kirbyju/tcia_utils). We do this to reduce package dependencies
     # (tcia_utils wants a lot of packages we don't need here), show progress bars, and
     # store data in same folder structure as the nbia-data-retriever would do.
-
+    global metadata_df
     parser = argparse.ArgumentParser()
     parser.add_argument("--manifest", default="", help="nbia manifest file")
     parser.add_argument(

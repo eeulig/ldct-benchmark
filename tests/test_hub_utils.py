@@ -3,7 +3,6 @@ import tempfile
 
 import numpy as np
 import pydicom
-import requests
 import torch
 
 from ldctbench.hub import Methods
@@ -45,9 +44,10 @@ def test_denoise_random_3D_numpy_array_not_normalized():
 def test_denoise_dicom():
     # Download a single DICOM to tempdir
     tempdir = tempfile.TemporaryDirectory()
-    r = requests.get("https://dataverse.harvard.edu/api/access/datafile/7576771")
-    with open(os.path.join(tempdir.name, "0.dcm"), "wb") as f:
-        f.write(r.content)
+    file_id = "496788de-f0f0-41fd-b19a-6da82268fd0a"
+    os.system(
+        f's5cmd --no-sign-request --endpoint-url https://s3.amazonaws.com cp "s3://idc-open-data/b9cf8e7a-2505-4137-9ae3-f8d0cf756c13/{file_id}.dcm" {tempdir.name}'
+    )
 
     # Apply network
     denoise_dicom(
@@ -58,8 +58,10 @@ def test_denoise_dicom():
     )
 
     # Test that dicoms are identical except for PixelData DICOM tag
-    ds1 = pydicom.read_file(os.path.join(tempdir.name, "0.dcm"))
-    ds2 = pydicom.read_file(os.path.join(tempdir.name, f"0_{Methods.CNN10.value}.dcm"))
+    ds1 = pydicom.read_file(os.path.join(tempdir.name, f"{file_id}.dcm"))
+    ds2 = pydicom.read_file(
+        os.path.join(tempdir.name, f"{file_id}_{Methods.CNN10.value}.dcm")
+    )
     diffs = [
         (elem1.tag.group, elem1.tag.element)
         for (elem1, elem2) in zip(ds1, ds2)
