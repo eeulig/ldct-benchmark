@@ -1,6 +1,6 @@
 {
     "resnet": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=p3CIkV4O",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/resnet.pt",
         "checksum": "4fe7137fe5abe7c381d746914528eaf23f061204580d8f027faf4d5eaaca6714",
         "model_name": "Model",
         "args": {},
@@ -11,7 +11,7 @@
         "normalization": "meanstd"
     },
     "bilateral": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=YqiokoAv",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/bilateral.pt",
         "checksum": "3e0722758e31c92fd11cc8bb9f5d2e93714a885bbe21183228fbe8946e79d5ff",
         "model_name": "Model",
         "args": {"cuda": true},
@@ -19,7 +19,7 @@
         "normalization": "meanstd"
     },
     "cnn10": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=LGCIEJ1u",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/cnn10.pt",
         "checksum": "ee96e494c8eda02e946464df29cf43c14163e63bc4b1df6d8907ee33a1a18c3e",
         "model_name": "Model",
         "args": {},
@@ -27,7 +27,7 @@
         "normalization": "meanstd"
     },
     "dugan": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=ljCok94w",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/dugan.pt",
         "checksum": "c6faad8376994fe22eadc0a723f81705fda6f435f40ef0f999666e871216ac5e",
         "model_name": "Model",
         "args": {},
@@ -35,7 +35,7 @@
         "normalization": "meanstd"
     },
     "qae": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=5LiIE1Em",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/qae.pt",
         "checksum": "ca6ce543b476d4c3673acd2f3d1284d47d98483c41a61cc912f5214c80921363",
         "model_name": "Model",
         "args": {},
@@ -43,7 +43,7 @@
         "normalization": "meanstd"
     },
     "redcnn": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=2GCokzaQ",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/redcnn.pt",
         "checksum": "058ae58264a00116e5620ed88047e687c7e93c8b732bfd6d7796e76bae0c74f3",
         "model_name": "Model",
         "args": {},
@@ -51,7 +51,7 @@
         "normalization": "meanstd"
     },
     "transct": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=6aiIEj6Q",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/transct.pt",
         "checksum": "37b5af1cb4fdfaa0c1d67d5992a5e9c6da5b6afda59bf5274d1fe5db163f959e",
         "model_name": "Model",
         "args": {},
@@ -59,7 +59,7 @@
         "normalization": "meanstd"
     },
     "wganvgg": {
-        "url": "https://my.hidrive.com/api/sharelink/download?id=GHCoEb4H",
+        "url": "https://downloads.eeulig.com/ldct-benchmark/wganvgg.pt",
         "checksum": "1ad87d16aefea99a9eeb474c33127971131cc21a07e129bf464c764cf9ca6003",
         "model_name": "Model",
         "args": {},

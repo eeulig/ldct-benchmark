@@ -10,6 +10,11 @@ from tqdm import tqdm
 from ldctbench.hub import Methods, load_model
 from ldctbench.utils.test_utils import denormalize, normalize
 
+SUPPORTED_TRANSFER_SYNTAX_UIDS = [
+    pydicom.uid.ExplicitVRLittleEndian,
+    pydicom.uid.RLELossless,
+]
+
 
 @torch.no_grad()
 def denoise_numpy(
@@ -162,9 +167,12 @@ def denoise_dicom(
     files = None
     if os.path.isdir(dicom_path):
         files = [
-            os.path.join(dicom_path, file)
-            for file in os.listdir(dicom_path)
-            if pydicom.misc.is_dicom(os.path.join(dicom_path, file))
+            os.path.join(dicom_path, item)
+            for item in os.listdir(dicom_path)
+            if (
+                not os.path.isdir(os.path.join(dicom_path, item))
+                and pydicom.misc.is_dicom(os.path.join(dicom_path, item))
+            )
         ]
     elif pydicom.misc.is_dicom(dicom_path):
         files = [dicom_path]
@@ -175,23 +183,22 @@ def denoise_dicom(
     for file in tqdm(files, desc="Denoise DICOMs", disable=disable_progress):
         ds = pydicom.read_file(file)
 
-        # Training data had RescaleIntercept: -1024 HU and RescaleSlope: 1.0. raise a warning if given dicom has different values
+        # Training data had RescaleIntercept: -1024 HU and RescaleSlope: 1.0. Raise a warning if given dicom has different values
         intercept = getattr(ds, "RescaleIntercept", None)
         slope = getattr(ds, "RescaleSlope", None)
-        if not intercept or int(intercept) != -1024:
+        if intercept is None or int(intercept) != -1024:
             warnings.warn(
                 f"Expected DICOM data to have intercept -1024 but got {intercept} instead!"
             )
-        if not intercept or float(slope) != 1.0:
+        if slope is None or float(slope) != 1.0:
             warnings.warn(
                 f"Expected DICOM data to have slope 1.0 but got {slope} instead!"
             )
 
-        # Might be that this function doesn't properly handle DICOM files with compressed pixel data. Raise a warning.
-        if not ds.file_meta.TransferSyntaxUID == pydicom.uid.ExplicitVRLittleEndian:
-            ds.decompress()
-            warnings.warn(
-                f"TransferSyntaxUID (0002, 0010) must be {pydicom.uid.ExplicitVRLittleEndian} ({pydicom.uid.ExplicitVRLittleEndian.name}) but got {ds.file_meta.TransferSyntaxUID} ({ds.file_meta.TransferSyntaxUID.name}) instead! Used pydicoms .decompress()"
+        # Raise error if TransferSyntaxUID is not supported
+        if not ds.file_meta.TransferSyntaxUID in SUPPORTED_TRANSFER_SYNTAX_UIDS:
+            raise ValueError(
+                f"TransferSyntaxUID (0002, 0010) must be one of {', '.join([f'{item} ({item.name})' for item in SUPPORTED_TRANSFER_SYNTAX_UIDS])}) but got {ds.file_meta.TransferSyntaxUID} ({ds.file_meta.TransferSyntaxUID.name}) instead!"
             )
 
         # Denoise image data
@@ -208,8 +215,12 @@ def denoise_dicom(
             out=x_denoised,
         )
 
-        # Overwrite existing PixelData
-        ds.PixelData = x_denoised.astype(x.dtype).tobytes()
+        # Update PixelData, compressed if needed
+        if ds.file_meta.TransferSyntaxUID.is_compressed:
+            ds.compress(ds.file_meta.TransferSyntaxUID, x_denoised.astype(x.dtype))
+            print(f"Compressed again using {ds.file_meta.TransferSyntaxUID.name}")
+        else:
+            ds.PixelData = x_denoised.astype(x.dtype).tobytes()
 
         # Save as a new file
         new_filepath = os.path.join(savedir, os.path.basename(file))
