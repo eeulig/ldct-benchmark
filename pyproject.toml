@@ -17,7 +17,7 @@ dependencies = [
   "matplotlib",
   "tqdm>4.66",
   "scikit-image",
-  "pydicom",
+  "pydicom==3.0.1",
   "platformdirs",
   "torchmetrics",
   "pandas",
@@ -51,7 +51,7 @@ Documentation = "https://eeulig.github.io/ldct-benchmark/"
 
 [tool.setuptools.packages.find]
 include = ["ldctbench*"]
-exclude = ["assets*", "tests*", "configs*"]
+exclude = ["assets*", "tests*", "configs*", "docs*"]
 namespaces = false
 
 [tool.black]

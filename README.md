@@ -9,6 +9,7 @@
 [![PyPI - Version](https://img.shields.io/pypi/v/ldct-benchmark?color=blue&cacheSeconds=!%5BPyPI%20-%20Version%5D(https%3A%2F%2Fimg.shields.io%2Fpypi%2Fv%2Fldct-benchmark))](https://pypi.org/project/ldct-benchmark/)
 ![License](https://img.shields.io/badge/MIT-blue?label=License)
 [![arXiv](https://img.shields.io/badge/2401.04661-red?label=arXiv)](https://arxiv.org/abs/2401.04661)
+[![DOI](https://img.shields.io/badge/10.1002%2Fmp.17379-red?label=MedPhys)](https://doi.org/10.1002/mp.17379)
 
 [GitHub](https://github.com/eeulig/ldct-benchmark) | [Documentation](https://eeulig.github.io/ldct-benchmark/)
 
@@ -49,15 +50,30 @@ We welcome contributions of novel denoising algorithms. For details on how to do
 
 ## Reference
 If you find this project useful for your work, please cite our [arXiv preprint](https://arxiv.org/abs/2401.04661):
-> Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low Dose CT Image Denoising Algorithms. arXiv, 2401.04661.
+> Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms. arXiv, 2401.04661.
 
 ```bibtex
-@article{eulig2024ldctbench,
-    title={Benchmarking Deep Learning-Based Low Dose CT Image Denoising Algorithms}, 
-    author={Elias Eulig and Björn Ommer and Marc Kachelrieß},
-    year={2024},
-    eprint={2401.04661},
-    archivePrefix={arXiv},
-    primaryClass={physics.med-ph}
+@article{ldctbench-arxiv,
+  title = {Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms}, 
+  author = {Elias Eulig and Björn Ommer and Marc Kachelrieß},
+  year = {2024},
+  eprint = {2401.04661},
+  archivePrefix = {arXiv},
+  primaryClass = {physics.med-ph}
+}
+```
+
+or [Medical Physics paper](https://doi.org/10.1002/mp.17379):
+> Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms. Medical Physics.
+
+```bibtex
+@article{ldctbench-medphys,
+  title = {Benchmarking deep learning-based low-dose CT image denoising algorithms},
+  author = {Eulig, Elias and Ommer, Björn and Kachelrieß, Marc},
+  journal = {Medical Physics},
+  year = {2024},
+  doi = {https://doi.org/10.1002/mp.17379},
+  url = {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.17379},
+  eprint = {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1002/mp.17379},
 }
 ```

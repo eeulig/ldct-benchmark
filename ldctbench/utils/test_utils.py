@@ -4,12 +4,9 @@ import os
 import warnings
 from typing import Callable, Dict, List, Literal, Optional, Tuple, Union
 
-import matplotlib.patches as patches
-import matplotlib.pyplot as plt
 import numpy as np
 import torch
 import torch.nn as nn
-from matplotlib import offsetbox
 from skimage.metrics import mean_squared_error, structural_similarity
 from torchmetrics.functional.image import visual_information_fidelity
 
@@ -204,87 +201,6 @@ def apply_center_width(
     ) * (out_range[1] - out_range[0]) + out_range[0]
     res[x > upper] = out_range[1]
     return res
-
-
-def add_crop(
-    ax: plt.Axes,
-    image: np.array,
-    coords: Tuple[int, int],
-    cropsize: int,
-    vmin: float = 0.0,
-    vmax: float = 1.0,
-    edgecolor: Tuple[float] = (1.0, 0.0, 0.0),
-    pos_crop: Tuple[int, int] = (0.0, 0.0),
-    lw_crop: float = 1.0,
-    lw_overlay: float = 1.0,
-    **kwargs,
-):
-    """Function to add crop to an existing matplotlib axis
-
-    Parameters
-    ----------
-    ax : plt.Axes
-        Axis to add plot to
-    image : np.array
-        2-dim array containing the (uncropped) image
-    coords : Tuple[int, int]
-        Center coordinates of the crop
-    cropsize : int
-        Cropsize in pixels
-    vmin : float, optional
-        vmin to use for the cropped image, by default 0.0
-    vmax : float, optional
-        vmax to use for the cropped image, by default 1.0
-    zoom : float, optional
-        Zoom of the cropped image, by default 1.0
-    edgecolor : Tuple[float], optional
-        Edgecolor around crop and bbox, by default (1.,0.,0.)
-    pos_crop : Tuple[int, int], optional
-        Position (in pixels) to place crop on the axis, by default (0., 0.)
-    lw_crop : float, optional
-        Linewidth of border around crop, by default 1.
-    lw_overlay : float, optional
-        Linewidth of border in uncropped image on axis, by default 1.
-    kwargs: Additional kwargs passed to offsetbox.OffsetImage
-        (e.g., `cmap`, `zoom`)
-
-    Examples
-    --------
-
-    >>> im = np.random.uniform(low=24.0, high=4096.0, size=(128, 128))
-    >>> fig, ax = plt.subplots()
-    >>> ax.imshow(im, vmin=0., vmax=2000., cmap="gray")
-    >>> add_crop(ax, im, coords=(64,64), cropsize=32, vmin=0., vmax=2000., cmap='gray', pos_crop=(0,0))
-    >>> plt.show()
-
-    """
-    x, y = coords
-    crop_half = cropsize // 2
-    im = image[x - crop_half : x + crop_half, y - crop_half : y + crop_half]
-    im = offsetbox.OffsetImage(im, **kwargs)
-    img = im.get_children()[0]
-    img.set_clim(vmin=vmin, vmax=vmax)
-    im.image.axes = ax
-    ab = offsetbox.AnnotationBbox(
-        im,
-        (0, 0),
-        xycoords="data",
-        xybox=pos_crop,
-        pad=0.0,
-        bboxprops=dict(edgecolor=edgecolor, linewidth=lw_crop),
-    )
-    ax.add_artist(ab)
-
-    # Add rectangular patch to image
-    rect = patches.Rectangle(
-        (coords[1] - crop_half, coords[0] - crop_half),
-        cropsize,
-        cropsize,
-        linewidth=lw_overlay,
-        edgecolor=edgecolor,
-        facecolor="none",
-    )
-    ax.add_patch(rect)
 
 
 def vif(x, y, sigma_n_sq=2.0):

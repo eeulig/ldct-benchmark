@@ -26,6 +26,12 @@ def load_json(path: str):
         return d
 
 
+def save_json(content, path: str):
+    """Save python object to json file"""
+    with open(path, "w") as f:
+        json.dump(content, f)
+
+
 def dump_config(args: Namespace, path: str):
     """Save argparse.Namespace to yaml file"""
     with open(os.path.join(path, "args.yaml"), "w") as outfile:
