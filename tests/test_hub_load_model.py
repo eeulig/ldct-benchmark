@@ -9,8 +9,8 @@ def test_load_cnn10():
 def test_load_cnn10_with_lowercase_str():
     net = load_model("cnn10")
     assert net
-    
-    
+
+
 def test_load_redcnn():
     net = load_model(Methods.REDCNN)
     assert net
