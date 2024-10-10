@@ -17,7 +17,7 @@ dependencies = [
   "matplotlib",
   "tqdm>4.66",
   "scikit-image",
-  "pydicom",
+  "pydicom==3.0.1",
   "platformdirs",
   "torchmetrics",
   "pandas",

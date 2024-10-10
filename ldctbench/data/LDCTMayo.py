@@ -213,10 +213,10 @@ class LDCTMayo(Dataset):
         # Load image
         sample = self.samples[idx]
         f_name = self._idx2filename(sample["slice"], sample["n_slices"])
-        x = pydicom.read_file(
+        x = pydicom.filereader.dcmread(
             os.path.join(self.path, sample["input"][2:], f_name)
         ).pixel_array.astype("float32")
-        y = pydicom.read_file(
+        y = pydicom.filereader.dcmread(
             os.path.join(self.path, sample["target"][2:], f_name)
         ).pixel_array.astype("float32")
 
@@ -242,10 +242,10 @@ class TestData(Dataset):
             )
             for s in range(patient_dict["n_slices"]):
                 f_name = self._idx2filename(s + 1, patient_dict["n_slices"])
-                x = pydicom.read_file(
+                x = pydicom.filereader.dcmread(
                     os.path.join(datafolder, patient_dict["input"][2:], f_name)
                 ).pixel_array.astype("float32")
-                y = pydicom.read_file(
+                y = pydicom.filereader.dcmread(
                     os.path.join(datafolder, patient_dict["target"][2:], f_name)
                 ).pixel_array.astype("float32")
                 self.samples[-1]["x"].append(x)

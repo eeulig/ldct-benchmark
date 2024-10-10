@@ -44,7 +44,6 @@ class DicomData:
 def sample_dicom():
     dicom_data = DicomData("496788de-f0f0-41fd-b19a-6da82268fd0a")
     yield dicom_data
-    print(dicom_data.folder_path)
     dicom_data.destroy()
 
 
@@ -114,8 +113,8 @@ def test_denoise_dicom_single_file_when_savedir_is_same_as_dicom_path_raise_warn
     assert str(record[0].message).startswith("Adding suffix")
 
     # Check that dicoms are identical except for PixelData DICOM tag
-    ds1 = pydicom.read_file(sample_dicom.dicom_path)
-    ds2 = pydicom.read_file(
+    ds1 = pydicom.filereader.dcmread(sample_dicom.dicom_path)
+    ds2 = pydicom.filereader.dcmread(
         os.path.join(
             sample_dicom.folder_path,
             f"{sample_dicom.file_id}_{Methods.CNN10.value}.dcm",
@@ -183,7 +182,7 @@ def test_denoise_dicom_when_wrong_intercept_raises_warning(sample_dicom):
     manipulated_dicom_path = os.path.join(
         sample_dicom.folder_path, f"{sample_dicom.file_id}_wrong_intercept.dcm"
     )
-    ds = pydicom.read_file(sample_dicom.dicom_path)
+    ds = pydicom.filereader.dcmread(sample_dicom.dicom_path)
     ds.RescaleIntercept = "0"
     ds.save_as(manipulated_dicom_path)
 
@@ -208,7 +207,7 @@ def test_denoise_dicom_when_wrong_slope_raises_warning(sample_dicom):
     manipulated_dicom_path = os.path.join(
         sample_dicom.folder_path, f"{sample_dicom.file_id}_wrong_slope.dcm"
     )
-    ds = pydicom.read_file(sample_dicom.dicom_path)
+    ds = pydicom.filereader.dcmread(sample_dicom.dicom_path)
     ds.RescaleSlope = "0"
     ds.save_as(manipulated_dicom_path)
 
@@ -233,8 +232,11 @@ def test_denoise_dicom_when_dicom_pixel_data_is_compressed(sample_dicom):
     compressed_dicom_path = os.path.join(
         sample_dicom.folder_path, f"{sample_dicom.file_id}_compressed.dcm"
     )
-    ds = pydicom.read_file(sample_dicom.dicom_path)
-    ds.compress(transfer_syntax_uid=pydicom.uid.RLELossless)
+
+    ds = pydicom.filereader.dcmread(sample_dicom.dicom_path)
+    ds.compress(
+        transfer_syntax_uid=pydicom.uid.RLELossless, generate_instance_uid=False
+    )
     ds.save_as(compressed_dicom_path)
 
     # Apply network
@@ -244,9 +246,15 @@ def test_denoise_dicom_when_dicom_pixel_data_is_compressed(sample_dicom):
         method=Methods.CNN10,
     )
 
-    # Check that dicoms are identical except for PixelData DICOM tag
-    ds1 = pydicom.read_file(compressed_dicom_path)
-    ds2 = pydicom.read_file(sample_dicom.dicom_path)
+    # Check that dicoms (compressed and compressed -> denoised) are identical except for PixelData DICOM tag
+    ds1 = pydicom.filereader.dcmread(compressed_dicom_path)
+    ds2 = pydicom.filereader.dcmread(
+        os.path.join(
+            sample_dicom.folder_path,
+            "denoised",
+            f"{sample_dicom.file_id}_compressed.dcm",
+        )
+    )
 
     diffs = [
         (elem1.tag.group, elem1.tag.element)
@@ -259,9 +267,8 @@ def test_denoise_dicom_when_dicom_pixel_data_is_compressed(sample_dicom):
         if elem1 != elem2
     ]  # Iterate over file meta tags (this is where TransferSyntaxUID is stored)
 
-    assert len(diffs) == 2
+    assert len(diffs) == 1
     assert (32736, 16) in diffs
-    assert (2, 16) in diffs
 
     # Delete all files except the original DICOM
     sample_dicom.cleanup()
@@ -273,7 +280,7 @@ def test_denoise_dicom_when_unsupported_transfer_syntax_raises_error(sample_dico
         sample_dicom.folder_path,
         f"{sample_dicom.file_id}_unsupported_transfer_syntax.dcm",
     )
-    ds = pydicom.read_file(sample_dicom.dicom_path)
+    ds = pydicom.filereader.dcmread(sample_dicom.dicom_path)
     ds.file_meta.TransferSyntaxUID = pydicom.uid.DeflatedExplicitVRLittleEndian
     ds.save_as(manipulated_dicom_path)
 

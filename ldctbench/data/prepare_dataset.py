@@ -40,7 +40,9 @@ np.random.seed(opt.seed)
 
 
 def load_dicom(path):
-    slices = [pydicom.read_file(os.path.join(path, s)) for s in os.listdir(path)]
+    slices = [
+        pydicom.filereader.dcmread(os.path.join(path, s)) for s in os.listdir(path)
+    ]
     slices.sort(key=lambda x: float(x.ImagePositionPatient[2]))
     image = np.stack([s.pixel_array for s in slices])
     return image

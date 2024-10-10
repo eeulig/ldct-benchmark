@@ -181,7 +181,7 @@ def denoise_dicom(
 
     # Iterate over filepaths
     for file in tqdm(files, desc="Denoise DICOMs", disable=disable_progress):
-        ds = pydicom.read_file(file)
+        ds = pydicom.filereader.dcmread(file)
 
         # Training data had RescaleIntercept: -1024 HU and RescaleSlope: 1.0. Raise a warning if given dicom has different values
         intercept = getattr(ds, "RescaleIntercept", None)
@@ -217,7 +217,11 @@ def denoise_dicom(
 
         # Update PixelData, compressed if needed
         if ds.file_meta.TransferSyntaxUID.is_compressed:
-            ds.compress(ds.file_meta.TransferSyntaxUID, x_denoised.astype(x.dtype))
+            ds.compress(
+                ds.file_meta.TransferSyntaxUID,
+                x_denoised.astype(x.dtype),
+                generate_instance_uid=False,
+            )
             print(f"Compressed again using {ds.file_meta.TransferSyntaxUID.name}")
         else:
             ds.PixelData = x_denoised.astype(x.dtype).tobytes()
