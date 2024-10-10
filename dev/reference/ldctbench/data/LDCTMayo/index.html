@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.34">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.40">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.35f28582.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1706,7 +1706,7 @@
               Bases: <code><span title="torch.utils.data.Dataset">Dataset</span></code></p>
 
 
-      <p>Dataset class for the LDCT dataset</p>
+        <p>Dataset class for the LDCT dataset</p>
 
 
 
@@ -1734,7 +1734,7 @@
 <p><span class="doc-section-title">Attributes:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.seed">seed</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.seed">seed</span></code></b>
               (<code>int</code>)
           –
           <div class="doc-md-description">
@@ -1742,7 +1742,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.path">path</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.path">path</span></code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1750,7 +1750,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.patchsize">patchsize</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.patchsize">patchsize</span></code></b>
               (<code>int</code>)
           –
           <div class="doc-md-description">
@@ -1758,7 +1758,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.eval_patchsize">eval_patchsize</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.eval_patchsize">eval_patchsize</span></code></b>
               (<code>int</code>)
           –
           <div class="doc-md-description">
@@ -1766,7 +1766,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.data_subset">data_subset</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.data_subset">data_subset</span></code></b>
               (<code>float</code>)
           –
           <div class="doc-md-description">
@@ -1774,7 +1774,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.data_norm">data_norm</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.data_norm">data_norm</span></code></b>
               (<code>str</code>)
           –
           <div class="doc-md-description">
@@ -1782,7 +1782,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.info">info</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.info">info</span></code></b>
               (<code>dict</code>)
           –
           <div class="doc-md-description">
@@ -1790,7 +1790,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.samples">samples</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.samples">samples</span></code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -1798,7 +1798,7 @@
           </div>
         </li>
         <li class="doc-section-item field-body">
-          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.weights">weights</span></code></b>
+          <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.weights">weights</span></code></b>
               (<code>list</code>)
           –
           <div class="doc-md-description">
@@ -1846,7 +1846,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Given an index, get slice, perform random cropping, normalize and return</p>
+        <p>Given an index, get slice, perform random cropping, normalize and return</p>
 
     </div>
 
@@ -1863,7 +1863,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Length of dataset</p>
+        <p>Length of dataset</p>
 
     </div>
 
@@ -1880,7 +1880,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Denormalize samples with precomputed mean/std or min/max</p>
+        <p>Denormalize samples with precomputed mean/std or min/max</p>
 
 
 <p><span class="doc-section-title">Parameters:</span></p>
@@ -1934,7 +1934,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Reset random seeds</p>
+        <p>Reset random seeds</p>
 
     </div>
 
@@ -1955,7 +1955,7 @@
 
     <div class="doc doc-contents ">
 
-      <p>Convert input image to torch tensor and unsqueeze</p>
+        <p>Convert input image to torch tensor and unsqueeze</p>
 
     </div>
 
@@ -2063,10 +2063,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer"], "search": "../../../../assets/javascripts/workers/search.07f07601.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.56dfad97.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       
