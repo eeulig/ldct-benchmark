@@ -10,8 +10,9 @@ from tabulate import tabulate
 from tqdm import tqdm
 
 from ldctbench.data import TestData
+from ldctbench.evaluate import compute_metric, save_raw, setup_trained_model
 from ldctbench.hub import Methods, load_model
-from ldctbench.utils import compute_metric, save_raw, save_yaml, setup_trained_model
+from ldctbench.utils import save_yaml
 
 
 def main():
@@ -36,7 +37,7 @@ def main():
         "--metrics",
         nargs="+",
         default=["SSIM", "PSNR", "VIF"],
-        help="Metrics to compute. Must be either SSIM, PSNR, RMSE, or VIF.",
+        help="Metrics to compute. Must be either SSIM, PSNR, RMSE, VIF, or LDCTIQA.",
     )
     parser.add_argument(
         "--datafolder",
@@ -106,6 +107,12 @@ def main():
         for pat in data.samples
     }
 
+    # Setup LDCTIQA if in metrics
+    if "LDCTIQA" in args.metrics:
+        from ldctbench.evaluate.ldct_iqa import LDCTIQA
+
+        ldct_iqa = LDCTIQA(device=DEV)
+
     with torch.no_grad():
         for patient in (pbar := tqdm(data, desc="Inference for patient: ")):
             patient_name = patient["info"]["id"]
@@ -152,6 +159,7 @@ def main():
                             metrics=args.metrics,
                             denormalize_fn=data.denormalize,
                             exam_type=exam_type,
+                            ldct_iqa=ldct_iqa,
                         )
                         for m, r in res.items():
                             metrics[patient_name][m]["LD"].extend(r)
@@ -163,6 +171,7 @@ def main():
                         metrics=args.metrics,
                         denormalize_fn=data.denormalize,
                         exam_type=exam_type,
+                        ldct_iqa=ldct_iqa,
                     )
                     for m, r in res.items():
                         metrics[patient_name][m][method_name].extend(r)

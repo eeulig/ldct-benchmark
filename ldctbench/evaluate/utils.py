@@ -11,8 +11,9 @@ from skimage.metrics import mean_squared_error, structural_similarity
 from torchmetrics.functional.image import visual_information_fidelity
 
 import ldctbench
+from ldctbench.evaluate.ldct_iqa import LDCTIQA
 from ldctbench.hub.methods import Methods
-from ldctbench.utils import load_json, load_yaml
+from ldctbench.utils import apply_center_width, load_json, load_yaml
 
 package_dir = os.path.join(os.path.dirname(os.path.abspath(ldctbench.__file__)))
 
@@ -166,43 +167,6 @@ def preprocess(
     return torch.unsqueeze(x, 0)
 
 
-def apply_center_width(
-    x: np.ndarray,
-    center: Union[int, float],
-    width: Union[int, float],
-    out_range: Tuple = (0, 1),
-) -> np.ndarray:
-    """Apply some center and width to an image
-
-    Parameters
-    ----------
-    x : np.ndarray
-        Image array of arbitrary dimension
-    center : float
-        Float indicating the center
-    width : float
-        Float indicating the width
-    out_range : Tuple, optional
-        Desired output range, by default (0, 1)
-
-    Returns
-    -------
-    np.ndarray
-        Copy of input array with center and width applied
-    """
-    center = float(center)
-    width = float(width)
-    lower = center - 0.5 - (width - 1) / 2.0
-    upper = center - 0.5 + (width - 1) / 2.0
-    res = np.empty(x.shape, dtype=x.dtype)
-    res[x <= lower] = out_range[0]
-    res[(x > lower) & (x <= upper)] = (
-        (x[(x > lower) & (x <= upper)] - (center - 0.5)) / (width - 1.0) + 0.5
-    ) * (out_range[1] - out_range[0]) + out_range[0]
-    res[x > upper] = out_range[1]
-    return res
-
-
 def vif(x, y, sigma_n_sq=2.0):
     """Compute visual information fidelity"""
     x_t = torch.from_numpy(x.copy())
@@ -220,6 +184,7 @@ def compute_metric(
     metrics: List[str],
     denormalize_fn: Optional[Callable] = None,
     exam_type: Optional[str] = None,
+    ldct_iqa: Optional[LDCTIQA] = None,
 ) -> Dict[str, List]:
     """Compute metrics for given predictions and targets
 
@@ -230,11 +195,13 @@ def compute_metric(
     predictions : Union[torch.Tensor, np.ndarray]
         Tensor or ndarray of shape (mbs, 1, H, W) holding predictions
     metrics : List[str]
-        List of metrics must be "vif" | "psnr" | "rmse" | "ssim"
+        List of metrics must be "VIF" | "PSNR" | "RMSE" | "SSIM" | "LDCTIQA"
     denormalize_fn: Optional[Callable], optional
         Function to use for denormalizing, by default None
     exam_type : Optional[str], optional
         Exam type (for computing SSIM and PSNR on windowed images), by default None
+    ldct_iqa : Optional[LDCTIQA], optional
+        LDCTIQA object for computing LDCTIQA score, by default None
 
     Returns
     -------
@@ -246,7 +213,7 @@ def compute_metric(
     ValueError
         If `predictions.shape != targets.shape`
     ValueError
-        If element in metric is not "vif" | "psnr" | "rmse" | "ssim"
+        If element in metric is not "VIF" | "PSNR" | "RMSE" | "SSIM" | "LDCTIQA"
     """
     if isinstance(targets, torch.Tensor):
         if targets.is_cuda:
@@ -300,6 +267,9 @@ def compute_metric(
                 t = np.clip(t, a_min=0.0, a_max=DATA_RANGE)
                 p = np.clip(p, a_min=0.0, a_max=DATA_RANGE)
                 res[metric].append(np.sqrt(mean_squared_error(t, p)).item())
+            elif metric == "LDCTIQA":
+                # This is a no-reference metric, thus only needs predictions
+                res[metric].append(ldct_iqa(p).item())
             else:
                 raise ValueError(f"Unknown metric {metric}")
     return res
