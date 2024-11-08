@@ -8,8 +8,12 @@ nav:
     - Denoise DICOMs using pretrained models: examples/denoise_dicoms.md
     - Train a custom model: examples/train_custom_model.md
     - Test models: examples/test_models.md
+    - Evaluation using LDCT IQA: examples/ldct_iqa.md
   - Code Reference:
     - data: reference/ldctbench/data/LDCTMayo.md
+    - evaluate:
+      - utils: reference/ldctbench/evaluate/utils.md
+      - ldct_iqa: reference/ldctbench/evaluate/ldct_iqa.md
     - hub: 
       - methods: reference/ldctbench/hub/methods.md
       - load_model: reference/ldctbench/hub/load_model.md
@@ -41,7 +45,6 @@ nav:
         - Trainer: reference/ldctbench/methods/bilateral/Trainer.md
     - utils:
       - training_utils: reference/ldctbench/utils/training_utils.md
-      - test_utils: reference/ldctbench/utils/test_utils.md
       - metrics: reference/ldctbench/utils/metrics.md
       - auxiliaries: reference/ldctbench/utils/auxiliaries.md
 

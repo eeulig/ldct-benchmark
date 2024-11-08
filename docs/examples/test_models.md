@@ -12,12 +12,12 @@ Evaluating some model on the test data split of the LDCT data is as simple as ru
 ```
 usage: ldctbench-test [-h] [--methods METHODS [METHODS ...]] [--metrics METRICS [METRICS ...]] [--datafolder DATAFOLDER] [--data_norm DATA_NORM] [--results_dir RESULTS_DIR] [--device DEVICE] [--print_table]
 
-optional arguments:
+options:
   -h, --help            show this help message and exit
   --methods METHODS [METHODS ...]
                         Methods to evaluate. Can be either method name of pretrained networks (cnn10, redcnn, qae, ...), or run name of network trained by the user.
   --metrics METRICS [METRICS ...]
-                        Metrics to compute. Must be either SSIM, PSNR, RMSE, or VIF.
+                        Metrics to compute. Must be either SSIM, PSNR, RMSE, VIF, or LDCTIQA.
   --datafolder DATAFOLDER
                         Path to datafolder. If not set, an environemnt variable LDCTBENCH_DATAFOLDER must be set.
   --data_norm DATA_NORM

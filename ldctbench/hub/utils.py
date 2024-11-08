@@ -7,8 +7,8 @@ import pydicom
 import torch
 from tqdm import tqdm
 
+from ldctbench.evaluate.utils import denormalize, normalize
 from ldctbench.hub import Methods, load_model
-from ldctbench.utils.test_utils import denormalize, normalize
 
 SUPPORTED_TRANSFER_SYNTAX_UIDS = [
     pydicom.uid.ExplicitVRLittleEndian,

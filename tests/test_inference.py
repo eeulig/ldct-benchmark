@@ -3,8 +3,9 @@ import os
 import numpy as np
 
 import ldctbench
+from ldctbench.evaluate import CW, normalize
 from ldctbench.hub import Methods
-from ldctbench.utils import CW, apply_center_width, load_yaml, normalize
+from ldctbench.utils import apply_center_width, load_yaml
 
 package_dir = os.path.join(os.path.dirname(os.path.abspath(ldctbench.__file__)))
 

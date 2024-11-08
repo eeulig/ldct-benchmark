@@ -1,0 +1,1 @@
+The files in this folder are test images taken from the [Google Drive link](https://drive.google.com/file/d/1DbZfTj4it-3QRTuJO73r1iQyHLRwPS6H/view?usp=sharing) provided in the official [GitHub repository of the challenge](https://github.com/Ewha-AI/LDCTIQAC2023).
