@@ -5,10 +5,11 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-from ldctbench import utils
-from ldctbench.methods.base import BaseTrainer
 from torch.autograd import Variable
 from tqdm import tqdm
+
+from ldctbench import utils
+from ldctbench.methods.base import BaseTrainer
 
 from .network import Model, UNet
 from .utils import SobelOperator, cutmix, ls_gan, mask_src_tgt, turn_on_spectral_norm

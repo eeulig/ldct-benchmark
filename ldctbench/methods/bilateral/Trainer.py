@@ -2,6 +2,7 @@ from argparse import Namespace
 
 import torch
 import torch.nn as nn
+
 from ldctbench import utils
 from ldctbench.methods.base import BaseTrainer
 
