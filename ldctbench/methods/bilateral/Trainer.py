@@ -2,8 +2,9 @@ from argparse import Namespace
 
 import torch
 import torch.nn as nn
-import utils
-from methods.base import BaseTrainer
+
+from ldctbench import utils
+from ldctbench.methods.base import BaseTrainer
 
 from .network import Model
 

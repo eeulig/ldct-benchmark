@@ -4,8 +4,9 @@ from typing import Dict
 import numpy as np
 import torch
 import torch.nn as nn
-import utils
-from methods.base import BaseTrainer
+
+from ldctbench import utils
+from ldctbench.methods.base import BaseTrainer
 
 from .network import Discriminator, Model
 
