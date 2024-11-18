@@ -5,8 +5,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torch.optim as optim
-import utils
-from methods.base import BaseTrainer
+from ldctbench import utils
+from ldctbench.methods.base import BaseTrainer
 from torch.autograd import Variable
 from tqdm import tqdm
 
