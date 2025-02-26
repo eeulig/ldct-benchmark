@@ -8,9 +8,9 @@ import warnings
 import matplotlib
 import numpy as np
 import torch
-import wandb
 
 import ldctbench.utils.auxiliaries as aux
+import wandb
 from ldctbench.utils.argparser import make_parser, use_config
 
 matplotlib.use("Agg")
