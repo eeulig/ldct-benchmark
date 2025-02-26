@@ -1,0 +1,52 @@
+project: ldct-benchmark
+program: ldctbench-train
+command:
+  - ${program}
+  - ${args_no_boolean_flags}
+description: Hyperparameter optimization for CNN-10
+method: bayes
+metric:
+  goal: maximize
+  name: SSIM
+name: cnn10-hpopt
+parameters:
+  adam_b1:
+    value: 0.9
+  adam_b2:
+    value: 0.999
+  data_norm:
+    value: meanstd
+  data_subset:
+    value: 1
+  devices:
+    value: 0
+  dryrun:
+    value: false
+  iterations_before_val:
+    value: 1000
+  lr:
+    distribution: log_uniform_values
+    max: 0.01
+    min: 1e-05
+  max_iterations:
+    distribution: int_uniform
+    max: 100000
+    min: 1000
+  mbs:
+    distribution: int_uniform
+    max: 128
+    min: 2
+  num_workers:
+    value: 4
+  optimizer:
+    value: adam
+  patchsize:
+    distribution: int_uniform
+    max: 128
+    min: 32
+  seed:
+    value: 1332
+  trainer:
+    value: cnn10
+  valsamples:
+    value: 8

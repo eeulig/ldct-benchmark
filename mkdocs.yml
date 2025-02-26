@@ -8,6 +8,7 @@ nav:
     - Denoise DICOMs using pretrained models: examples/denoise_dicoms.md
     - Train a custom model: examples/train_custom_model.md
     - Test models: examples/test_models.md
+    - Hyperparameter optimization: examples/hyperparameter_optimization.md
     - Evaluation using LDCT IQA: examples/ldct_iqa.md
   - Code Reference:
     - data: reference/ldctbench/data/LDCTMayo.md
