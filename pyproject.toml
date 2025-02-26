@@ -45,6 +45,7 @@ docs = [
 ldctbench-download-data = "ldctbench.scripts.download_data:main"
 ldctbench-train = "ldctbench.scripts.train:main"
 ldctbench-test = "ldctbench.scripts.test:main"
+ldctbench-hpopt = "ldctbench.scripts.hpopt:main"
 [project.urls]
 GitHub = "https://github.com/eeulig/ldct-benchmark"
 Documentation = "https://eeulig.github.io/ldct-benchmark/"
