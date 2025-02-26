@@ -5,9 +5,8 @@ from typing import Callable, Dict, Optional, Union
 import matplotlib.pyplot as plt
 import numpy as np
 import torch
-from skimage.metrics import mean_squared_error, structural_similarity
-
 import wandb
+from skimage.metrics import mean_squared_error, structural_similarity
 
 MAX_DATA_VAL = 2924.0
 EPS = 1e-8

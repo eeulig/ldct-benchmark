@@ -2,11 +2,11 @@ import os
 
 import numpy as np
 import torch
+import wandb
 from torch.autograd import Variable
 from tqdm import tqdm
 
 import ldctbench.utils as utils
-import wandb
 from ldctbench.data.LDCTMayo import LDCTMayo
 
 
