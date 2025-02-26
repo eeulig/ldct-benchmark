@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -590,6 +590,33 @@
   <a href="#ldctbench.data.LDCTMayo.LDCTMayo.__len__" class="md-nav__link">
     <span class="md-ellipsis">
       __len__
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._idx2filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      _idx2filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._normalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      _normalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._random_crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      _random_crop
     </span>
   </a>
   
@@ -1754,6 +1781,33 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._idx2filename" class="md-nav__link">
+    <span class="md-ellipsis">
+      _idx2filename
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._normalize" class="md-nav__link">
+    <span class="md-ellipsis">
+      _normalize
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ldctbench.data.LDCTMayo.LDCTMayo._random_crop" class="md-nav__link">
+    <span class="md-ellipsis">
+      _random_crop
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ldctbench.data.LDCTMayo.LDCTMayo.denormalize" class="md-nav__link">
     <span class="md-ellipsis">
       denormalize
@@ -1853,7 +1907,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>mode</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Which subset to use. Must be <code>train</code>, <code>val</code>, or <code>test</code>.</p>
@@ -1874,7 +1928,7 @@
     <ul>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.seed">seed</span></code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Random seed to use</p>
@@ -1882,7 +1936,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.path">path</span></code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Root path to datafolder</p>
@@ -1890,7 +1944,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.patchsize">patchsize</span></code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Patchsize to use for training.</p>
@@ -1898,7 +1952,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.eval_patchsize">eval_patchsize</span></code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Patchsize to use for validation.</p>
@@ -1906,7 +1960,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.data_subset">data_subset</span></code></b>
-              (<code>float</code>)
+              (<code><span title="float">float</span></code>)
           –
           <div class="doc-md-description">
             <p>Subset of the data to use.</p>
@@ -1914,7 +1968,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.data_norm">data_norm</span></code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Normalization of the data, must be <code>meanstd</code> or <code>minmax</code>.</p>
@@ -1922,7 +1976,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.info">info</span></code></b>
-              (<code>dict</code>)
+              (<code><span title="dict">dict</span></code>)
           –
           <div class="doc-md-description">
             <p>Dictionary of <code>info.yml</code> associated with the dataset.</p>
@@ -1930,7 +1984,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.samples">samples</span></code></b>
-              (<code>list</code>)
+              (<code><span title="list">list</span></code>)
           –
           <div class="doc-md-description">
             <p>List of all image slices</p>
@@ -1938,7 +1992,7 @@
         </li>
         <li class="doc-section-item field-body">
           <b><code><span title="ldctbench.data.LDCTMayo.LDCTMayo.__init__.weights">weights</span></code></b>
-              (<code>list</code>)
+              (<code><span title="list">list</span></code>)
           –
           <div class="doc-md-description">
             <p>List of weights associated with each slice. Slices of each patient having <code>n_slices</code> are weighted with <code>1/n_slices</code>.</p>
@@ -2016,6 +2070,156 @@
 <div class="doc doc-object doc-function">
 
 
+<h3 id="ldctbench.data.LDCTMayo.LDCTMayo._idx2filename" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_idx2filename</span><span class="p">(</span><span class="n">idx</span><span class="p">,</span> <span class="n">n_slices</span><span class="p">)</span></code>
+
+  <span class="doc doc-labels">
+      <small class="doc doc-label doc-label-staticmethod"><code>staticmethod</code></small>
+  </span>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Get filename for a patient of LDCT data given slice and number of slices in the scan.</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>idx</code></b>
+              (<code><span title="int">int</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Slice idx for which to return filename</p>
+          </div>
+        </li>
+        <li class="doc-section-item field-body">
+            <b><code>n_slices</code></b>
+              (<code><span title="int">int</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Number of slices of the scan necessary to figure out number of trailing zeros</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="str">str</span></code>
+          –
+          <div class="doc-md-description">
+            <p>Filename</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ldctbench.data.LDCTMayo.LDCTMayo._normalize" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_normalize</span><span class="p">(</span><span class="n">X</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Normalize samples with precomputed mean/std or min/max</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>X</code></b>
+              (<code><span title="numpy.ndarray">ndarray</span></code>)
+          –
+          <div class="doc-md-description">
+            <p>Array to normalize</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="numpy.ndarray">ndarray</span></code>
+          –
+          <div class="doc-md-description">
+            <p>Normalized array</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Raises:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="ValueError">ValueError</span></code>
+            –
+          <div class="doc-md-description">
+            <p>If normalization method <code>self.data_norm</code> is neither meanstd nor minmax</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
+<h3 id="ldctbench.data.LDCTMayo.LDCTMayo._random_crop" class="doc doc-heading">
+            <code class="highlight language-python"><span class="n">_random_crop</span><span class="p">(</span><span class="n">images</span><span class="p">)</span></code>
+
+</h3>
+
+
+    <div class="doc doc-contents ">
+
+        <p>Randomly crop the same patch from images (e.g. ground truth and input)</p>
+
+
+<p><span class="doc-section-title">Parameters:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+            <b><code>images</code></b>
+              (<code><span title="typing.List">List</span>[<span title="numpy.ndarray">ndarray</span>]</code>)
+          –
+          <div class="doc-md-description">
+            <p>List of images to crop in same position for</p>
+          </div>
+        </li>
+    </ul>
+
+
+<p><span class="doc-section-title">Returns:</span></p>
+    <ul>
+        <li class="doc-section-item field-body">
+              <code><span title="typing.List">List</span>[<span title="numpy.ndarray">ndarray</span>]</code>
+          –
+          <div class="doc-md-description">
+            <p>List of cropped images</p>
+          </div>
+        </li>
+    </ul>
+
+    </div>
+
+</div>
+
+<div class="doc doc-object doc-function">
+
+
 <h3 id="ldctbench.data.LDCTMayo.LDCTMayo.denormalize" class="doc doc-heading">
             <code class="highlight language-python"><span class="n">denormalize</span><span class="p">(</span><span class="n">X</span><span class="p">)</span></code>
 
@@ -2055,7 +2259,7 @@
 <p><span class="doc-section-title">Raises:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If normalization method <code>self.data_norm</code> is neihter meanstd nor minmax</p>
@@ -2210,7 +2414,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

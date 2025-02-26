@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1964,7 +1964,7 @@
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code>object</code></p>
+              Bases: <code><span title="object">object</span></code></p>
 
 
         <p>Object to log losses</p>
@@ -2005,7 +2005,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>dataloader</code></b>
-              (<code><span title="typing.Dict">Dict</span>[str, <span title="torch.utils.data.DataLoader">DataLoader</span>]</code>)
+              (<code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="torch.utils.data.DataLoader">DataLoader</span>]</code>)
           –
           <div class="doc-md-description">
             <p>Dict containing the dataloaders</p>
@@ -2013,7 +2013,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>losses</code></b>
-              (<code>str</code>, default:
+              (<code><span title="str">str</span></code>, default:
                   <code>&#39;loss&#39;</code>
 )
           –
@@ -2059,7 +2059,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>savepath</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Where to store losses .csv file</p>
@@ -2067,7 +2067,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>iteration</code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Current iteration</p>
@@ -2075,7 +2075,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>iterations_before_val</code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Number of of training iterations before validation</p>
@@ -2105,7 +2105,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>savepath</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>WHere to store pdf file</p>
@@ -2113,7 +2113,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>y_log</code></b>
-              (<code>bool</code>, default:
+              (<code><span title="bool">bool</span></code>, default:
                   <code>True</code>
 )
           –
@@ -2145,7 +2145,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>loss</code></b>
-              (<code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>[str, <span title="torch.Tensor">Tensor</span>], <span title="torch.Tensor">Tensor</span>]</code>)
+              (<code><span title="typing.Union">Union</span>[<span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="torch.Tensor">Tensor</span>], <span title="torch.Tensor">Tensor</span>]</code>)
           –
           <div class="doc-md-description">
             <p>Single loss or dict of losses</p>
@@ -2153,7 +2153,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>phase</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>To which phase the loss(es) to push belongs</p>
@@ -2161,7 +2161,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>name</code></b>
-              (<code>str</code>, default:
+              (<code><span title="str">str</span></code>, default:
                   <code>&#39;loss&#39;</code>
 )
           –
@@ -2210,7 +2210,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>phase</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>For which phase to summarize loss</p>
@@ -2242,7 +2242,7 @@
 
     <div class="doc doc-contents ">
             <p class="doc doc-class-bases">
-              Bases: <code>object</code></p>
+              Bases: <code><span title="object">object</span></code></p>
 
 
         <p>Object to log metrics</p>
@@ -2275,7 +2275,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>dataloader</code></b>
-              (<code><span title="typing.Dict">Dict</span>[str, <span title="torch.utils.data.DataLoader">DataLoader</span>]</code>)
+              (<code><span title="typing.Dict">Dict</span>[<span title="str">str</span>, <span title="torch.utils.data.DataLoader">DataLoader</span>]</code>)
           –
           <div class="doc-md-description">
             <p>Dict containing the dataloaders</p>
@@ -2283,7 +2283,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>metrics</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Name of metrics to log. Must be RMSE | SSIM | PSNR</p>
@@ -2337,7 +2337,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>savepath</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Where to store losses .csv file</p>
@@ -2345,7 +2345,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>iteration</code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Current iteration</p>
@@ -2353,7 +2353,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>iterations_before_val</code></b>
-              (<code>int</code>)
+              (<code><span title="int">int</span></code>)
           –
           <div class="doc-md-description">
             <p>Number of of training iterations before validation</p>
@@ -2383,7 +2383,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>savepath</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>WHere to store pdf file</p>
@@ -2433,14 +2433,14 @@
 <p><span class="doc-section-title">Raises:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If shape of predictions and targets are not identical</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If metric provided in init function is not in SSIM | PSNR | RMSE</p>
@@ -2591,7 +2591,7 @@
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       

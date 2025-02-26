@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
@@ -1763,7 +1763,7 @@
 </span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>  --device DEVICE       CUDA device id.
 </span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>  --print_table         Print results in table.
 </span></code></pre></div>
-The argument <code>--datafolder</code> can be omitted if the environment variable <code>LDCTBENCH_DATAFOLDER</code> is set accordingly (see <a class="autorefs autorefs-internal" href="../../getting_started/#3-set-environment-variable-to-the-data-folder">here</a>).</p>
+The argument <code>--datafolder</code> can be omitted if the environment variable <code>LDCTBENCH_DATAFOLDER</code> is set accordingly (see <a class="autorefs autorefs-internal" title="3. Set environment variable to the data folder" href="../../getting_started/#3-set-environment-variable-to-the-data-folder">here</a>).</p>
 <h2 id="evaluate-pretrained-models">Evaluate pretrained models</h2>
 <p>To test the pretrained CNN-10 and measure SSIM and PSNR, we would run:</p>
 <p><div class="language-shell highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ldctbench-test<span class="w"> </span>--methods<span class="w"> </span>cnn10<span class="w"> </span>--metrics<span class="w"> </span>SSIM<span class="w"> </span>PSNR<span class="w"> </span>--datafolder<span class="w"> </span>path/to/ldct-data
@@ -1772,7 +1772,7 @@ or
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ldctbench-test<span class="w"> </span>--methods<span class="w"> </span>cnn10<span class="w"> </span>--metrics<span class="w"> </span>SSIM<span class="w"> </span>PSNR
 </span></code></pre></div>
 if the environment variable <code>LDCTBENCH_DATAFOLDER</code> is set.</p>
-<p>By default, results are stored in <code>./results/test_metrics.yaml</code>. To print them in a markdown table, we can add <code>--print_table</code>. To reproduce <a class="autorefs autorefs-internal" href="../../denoising_algorithms/#test-set-performance">this table</a>, we can run:
+<p>By default, results are stored in <code>./results/test_metrics.yaml</code>. To print them in a markdown table, we can add <code>--print_table</code>. To reproduce <a class="autorefs autorefs-internal" title="Test set performance" href="../../denoising_algorithms/#test-set-performance">this table</a>, we can run:
 <div class="language-shell highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>ldctbench-test<span class="w"> </span>--datafolder<span class="w"> </span>path/to/ldct-data<span class="w"> </span>--print_table
 </span></code></pre></div></p>
 <h2 id="evaluate-custom-trained-models">Evaluate custom trained models</h2>
@@ -1904,7 +1904,7 @@ will print the following table</p>
     <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../js/katex.js"></script>
       

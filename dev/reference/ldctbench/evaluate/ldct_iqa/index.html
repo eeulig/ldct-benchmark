@@ -16,7 +16,7 @@
       
       
       <link rel="icon" href="../../../../assets/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.1">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
@@ -24,7 +24,7 @@
       
     
     
-      <link rel="stylesheet" href="../../../../assets/stylesheets/main.a40c8224.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8608ea7d.min.css">
       
         
         <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
@@ -1931,7 +1931,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>preprocess</code></b>
-              (<code>bool</code>, default:
+              (<code><span title="bool">bool</span></code>, default:
                   <code>True</code>
 )
           –
@@ -2000,14 +2000,14 @@
 <p><span class="doc-section-title">Raises:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If input is not a numpy array</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If image shape is not <code>[512,512]</code> or <code>[1,512,512]</code></p>
@@ -2058,7 +2058,7 @@
     <ul>
         <li class="doc-section-item field-body">
             <b><code>dicom_path</code></b>
-              (<code>str</code>)
+              (<code><span title="str">str</span></code>)
           –
           <div class="doc-md-description">
             <p>Path to a single DICOM file or a folder containig one or more DICOM files</p>
@@ -2066,7 +2066,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>savedir</code></b>
-              (<code>str</code>, default:
+              (<code><span title="str">str</span></code>, default:
                   <code>None</code>
 )
           –
@@ -2086,7 +2086,7 @@
         </li>
         <li class="doc-section-item field-body">
             <b><code>disable_progress</code></b>
-              (<code>bool</code>, default:
+              (<code><span title="bool">bool</span></code>, default:
                   <code>False</code>
 )
           –
@@ -2100,7 +2100,7 @@
 <p><span class="doc-section-title">Returns:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-              <code>list</code>
+              <code><span title="list">list</span></code>
           –
           <div class="doc-md-description">
             <p>List of IQA scores for each DICOM file</p>
@@ -2112,14 +2112,14 @@
 <p><span class="doc-section-title">Raises:</span></p>
     <ul>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If provided path is neither a DICOM file nor a folder containing at least one DICOM file</p>
           </div>
         </li>
         <li class="doc-section-item field-body">
-              <code>ValueError</code>
+              <code><span title="ValueError">ValueError</span></code>
             –
           <div class="doc-md-description">
             <p>If image shape is not <code>512 x 512</code></p>
@@ -2137,7 +2137,7 @@ Evalauate a folder of DICOM files and return scores (don't save them):
 <div class="language-python highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">from</span><span class="w"> </span><span class="nn">ldctbench.evaluate</span><span class="w"> </span><span class="kn">import</span> <span class="n">evaluate_dicom</span>
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">scores</span> <span class="o">=</span> <span class="n">evaluate_dicom</span><span class="p">(</span><span class="n">dicom_path</span><span class="o">=</span><span class="s2">&quot;path/to/dicom/series&quot;</span><span class="p">)</span>
 </span></code></pre></div></p>
-<p>The function is also documented in <a class="autorefs autorefs-internal" href="../../../../examples/ldct_iqa/#evaluate-dicoms-using-the-ldctiqa-model">this example</a>.</p>
+<p>The function is also documented in <a class="autorefs autorefs-internal" title="Evaluate DICOMs using the LDCTIQA model" href="../../../../examples/ldct_iqa/#evaluate-dicoms-using-the-ldctiqa-model">this example</a>.</p>
 
     </div>
 
@@ -2239,7 +2239,7 @@ Evalauate a folder of DICOM files and return scores (don't save them):
     <script id="__config" type="application/json">{"base": "../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../assets/javascripts/bundle.5090c770.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
         <script src="../../../../js/katex.js"></script>
       
