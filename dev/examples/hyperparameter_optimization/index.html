@@ -9,21 +9,25 @@
       
       
       
+        <link rel="prev" href="../test_models/">
       
       
-      <link rel="icon" href="../../../../../assets/favicon.png">
+        <link rel="next" href="../ldct_iqa/">
+      
+      
+      <link rel="icon" href="../../assets/favicon.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.5">
     
     
       
-        <title>ldctbench.methods.cnn10.argparser - LDCT Benchmark</title>
+        <title>Hyperparameter optimization - LDCT Benchmark</title>
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/stylesheets/main.8608ea7d.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8608ea7d.min.css">
       
         
-        <link rel="stylesheet" href="../../../../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -42,11 +46,11 @@
       
     
     
-      <link rel="stylesheet" href="../../../../../assets/_mkdocstrings.css">
+      <link rel="stylesheet" href="../../assets/_mkdocstrings.css">
     
       <link rel="stylesheet" href="https://unpkg.com/katex@0/dist/katex.min.css">
     
-    <script>__md_scope=new URL("../../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ldctbenchmethodscnn10argparser" class="md-skip">
+        <a href="#what-is-hyperparameter-optimization" class="md-skip">
           Skip to content
         </a>
       
@@ -92,9 +96,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../../../.." title="LDCT Benchmark" class="md-header__button md-logo" aria-label="LDCT Benchmark" data-md-component="logo">
+    <a href="../.." title="LDCT Benchmark" class="md-header__button md-logo" aria-label="LDCT Benchmark" data-md-component="logo">
       
-  <img src="../../../../../assets/favicon.png" alt="logo">
+  <img src="../../assets/favicon.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -111,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ldctbench.methods.cnn10.argparser
+              Hyperparameter optimization
             
           </span>
         </div>
@@ -234,9 +238,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../../../.." title="LDCT Benchmark" class="md-nav__button md-logo" aria-label="LDCT Benchmark" data-md-component="logo">
+    <a href="../.." title="LDCT Benchmark" class="md-nav__button md-logo" aria-label="LDCT Benchmark" data-md-component="logo">
       
-  <img src="../../../../../assets/favicon.png" alt="logo">
+  <img src="../../assets/favicon.png" alt="logo">
 
     </a>
     LDCT Benchmark
@@ -263,7 +267,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../.." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -284,7 +288,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../getting_started/" class="md-nav__link">
+      <a href="../../getting_started/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -305,7 +309,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../denoising_algorithms/" class="md-nav__link">
+      <a href="../../denoising_algorithms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -326,7 +330,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../model_hub/" class="md-nav__link">
+      <a href="../../model_hub/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -344,17 +348,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -369,7 +375,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Examples
@@ -383,7 +389,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../examples/denoise_dicoms/" class="md-nav__link">
+      <a href="../denoise_dicoms/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -405,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../examples/train_custom_model/" class="md-nav__link">
+      <a href="../train_custom_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -427,7 +433,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../examples/test_models/" class="md-nav__link">
+      <a href="../test_models/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,10 +452,29 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../../../../examples/hyperparameter_optimization/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Hyperparameter optimization
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -459,6 +484,51 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hyperparameter-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is hyperparameter optimization?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-hyperparameters-to-optimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define hyperparameters to optimize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-hyperparameter-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run hyperparameter optimization
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -471,7 +541,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../../../examples/ldct_iqa/" class="md-nav__link">
+      <a href="../ldct_iqa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -536,7 +606,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../data/LDCTMayo/" class="md-nav__link">
+      <a href="../../reference/ldctbench/data/LDCTMayo/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -594,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../evaluate/utils/" class="md-nav__link">
+      <a href="../../reference/ldctbench/evaluate/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -616,7 +686,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../evaluate/ldct_iqa/" class="md-nav__link">
+      <a href="../../reference/ldctbench/evaluate/ldct_iqa/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -682,7 +752,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hub/methods/" class="md-nav__link">
+      <a href="../../reference/ldctbench/hub/methods/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -704,7 +774,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hub/load_model/" class="md-nav__link">
+      <a href="../../reference/ldctbench/hub/load_model/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -726,7 +796,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../hub/utils/" class="md-nav__link">
+      <a href="../../reference/ldctbench/hub/utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -828,7 +898,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/cnn10/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -850,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/cnn10/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -916,7 +986,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redcnn/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/redcnn/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -938,7 +1008,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../redcnn/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/redcnn/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1004,7 +1074,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wganvgg/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/wganvgg/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1026,7 +1096,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wganvgg/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/wganvgg/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1092,7 +1162,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resnet/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/resnet/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1114,7 +1184,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../resnet/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/resnet/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1180,7 +1250,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../qae/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/qae/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1202,7 +1272,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../qae/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/qae/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1268,7 +1338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dugan/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/dugan/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1290,7 +1360,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../dugan/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/dugan/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1356,7 +1426,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../transct/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/transct/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1378,7 +1448,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../transct/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/transct/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bilateral/network/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/bilateral/network/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1466,7 +1536,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../bilateral/Trainer/" class="md-nav__link">
+      <a href="../../reference/ldctbench/methods/bilateral/Trainer/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1540,7 +1610,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utils/training_utils/" class="md-nav__link">
+      <a href="../../reference/ldctbench/utils/training_utils/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1562,7 +1632,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utils/metrics/" class="md-nav__link">
+      <a href="../../reference/ldctbench/utils/metrics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1584,7 +1654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../utils/auxiliaries/" class="md-nav__link">
+      <a href="../../reference/ldctbench/utils/auxiliaries/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1631,8 +1701,41 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-is-hyperparameter-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      What is hyperparameter optimization?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#define-hyperparameters-to-optimize" class="md-nav__link">
+    <span class="md-ellipsis">
+      Define hyperparameters to optimize
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-hyperparameter-optimization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run hyperparameter optimization
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1651,39 +1754,118 @@
   
 
 
-<h1 id="ldctbenchmethodscnn10argparser">ldctbench.methods.cnn10.argparser</h1>
+  <h1>Hyperparameter optimization</h1>
 
-
-<div class="doc doc-object doc-module">
-
-
-
-
-    <div class="doc doc-contents first">
-
-
-
-
-
-
-
-
-  <div class="doc doc-children">
-
-
-
-
-
-
-
-
-
-
-
-  </div>
-
-    </div>
-
+<div class="admonition info">
+<p class="admonition-title">Prerequisite</p>
+<p>This example assumes you have:</p>
+<ol>
+<li>The package <code>ldct-benchmark</code> installed</li>
+<li>The LDCT dataset downloaded to a folder <code>path/to/ldct-data</code></li>
+<li>The environment variable <code>LDCTBENCH_DATAFOLDER</code> set to that folder</li>
+</ol>
+<p>Please refer to <a href="../../getting_started/">Getting Started</a> for instructions on how to do these steps.</p>
+</div>
+<h2 id="what-is-hyperparameter-optimization">What is hyperparameter optimization?</h2>
+<p>Hyperparameter optimization is the process of finding the optimal configuration of hyperparameters for a machine learning model. In deep neural networks, hyperparameters such as learning rate, batch size, or weights of different loss terms can greatly influence model performance. Therefore, proper tuning of these parameters is crucial. The four most common methods for hyperparameter optimization are human optimization, grid search, randomized search, and Bayesian optimization.</p>
+<ol>
+<li>
+<p><strong>Human optimization:</strong> Manual fine-tuning involves iteratively adjusting hyperparameters based on intuition, experience, and observation of model performance. While this approach leverages domain expertise, it is time-consuming, subjective, and often fails to explore the hyperparameter space thoroughly.</p>
+</li>
+<li>
+<p><strong>Grid Search:</strong> Grid search systematically evaluates every combination of predefined hyperparameter values. It's comprehensive but computationally expensive, especially with many hyperparameters, as the number of combinations grows exponentially.</p>
+</li>
+<li>
+<p><strong>Randomized Search:</strong> Randomized search samples hyperparameter values from specified distributions rather than exhaustively trying all combinations. It is generally preferred over grid search<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</p>
+</li>
+<li>
+<p><strong>Bayesian Optimization:</strong> Bayesian optimization builds a surrogate model of the objective function and uses an acquisition function to determine which hyperparameter combinations to try next. Bayesian optimization has been shown to outperform other optimization methods on a variety of DNN and dataset configurations<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup><sup id="fnref:3"><a class="footnote-ref" href="#fn:3">3</a></sup>.</p>
+</li>
+</ol>
+<h2 id="define-hyperparameters-to-optimize">Define hyperparameters to optimize</h2>
+<p>As for logging, we use <a href="https://docs.wandb.ai/tutorials/sweeps/">Weights &amp; Biases</a> to tune hyperparameters. To configure a hyperparameter optimization run (sweep) you need to define a configuration file in YAML format. The configuration file specifies the optimization method, hyperparameters to tune, and their respective distributions. To optmize the CNN-10 model, we could use the following config file:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">configs/cnn10-hpopt.yaml</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">project</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ldct-benchmark</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">program</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ldctbench-train</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">command</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${program}</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">${args_no_boolean_flags}</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">description</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Hyperparameter optimization for CNN-10</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">method</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">bayes</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="nt">metric</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="nt">goal</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">maximize</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">SSIM</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cnn10-hpopt</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="nt">parameters</span><span class="p">:</span>
+</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="nt">adam_b1</span><span class="p">:</span>
+</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.9</span>
+</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="nt">adam_b2</span><span class="p">:</span>
+</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.999</span>
+</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="nt">data_norm</span><span class="p">:</span>
+</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">meanstd</span>
+</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="nt">data_subset</span><span class="p">:</span>
+</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1</span>
+</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="nt">devices</span><span class="p">:</span>
+</span><span id="__span-0-22"><a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0</span>
+</span><span id="__span-0-23"><a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a><span class="nt">dryrun</span><span class="p">:</span>
+</span><span id="__span-0-24"><a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">false</span>
+</span><span id="__span-0-25"><a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a><span class="nt">iterations_before_val</span><span class="p">:</span>
+</span><span id="__span-0-26"><a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+</span><span id="__span-0-27"><a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a><span class="nt">lr</span><span class="p">:</span>
+</span><span id="__span-0-28"><a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a><span class="w">    </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">log_uniform_values</span>
+</span><span id="__span-0-29"><a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a><span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.01</span>
+</span><span id="__span-0-30"><a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a><span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1e-05</span>
+</span><span id="__span-0-31"><a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a><span class="nt">max_iterations</span><span class="p">:</span>
+</span><span id="__span-0-32"><a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a><span class="w">    </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int_uniform</span>
+</span><span id="__span-0-33"><a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a><span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">100000</span>
+</span><span id="__span-0-34"><a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1000</span>
+</span><span id="__span-0-35"><a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="nt">mbs</span><span class="p">:</span>
+</span><span id="__span-0-36"><a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="w">    </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int_uniform</span>
+</span><span id="__span-0-37"><a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a><span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+</span><span id="__span-0-38"><a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2</span>
+</span><span id="__span-0-39"><a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="nt">num_workers</span><span class="p">:</span>
+</span><span id="__span-0-40"><a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">4</span>
+</span><span id="__span-0-41"><a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="nt">optimizer</span><span class="p">:</span>
+</span><span id="__span-0-42"><a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">adam</span>
+</span><span id="__span-0-43"><a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="nt">patchsize</span><span class="p">:</span>
+</span><span id="__span-0-44"><a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a><span class="w">    </span><span class="nt">distribution</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">int_uniform</span>
+</span><span id="__span-0-45"><a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a><span class="w">    </span><span class="nt">max</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">128</span>
+</span><span id="__span-0-46"><a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a><span class="w">    </span><span class="nt">min</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32</span>
+</span><span id="__span-0-47"><a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a><span class="nt">seed</span><span class="p">:</span>
+</span><span id="__span-0-48"><a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1332</span>
+</span><span id="__span-0-49"><a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a><span class="nt">trainer</span><span class="p">:</span>
+</span><span id="__span-0-50"><a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cnn10</span>
+</span><span id="__span-0-51"><a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a><span class="nt">valsamples</span><span class="p">:</span>
+</span><span id="__span-0-52"><a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">8</span>
+</span></code></pre></div>
+</div>
+</div>
+</div>
+<p>For your model, you may need to adjust the hyperparameters and their distributions. All arguments defined in the <code>argparser.py</code> of your method should be set in this configuration file either to a fixed value (not optimized) or a distribution of values (optimized). A full list of hyperparameter configuration options can be found in the <a href="https://docs.wandb.ai/guides/sweeps/sweep-config-keys/">W&amp;B documentation</a>.</p>
+<h2 id="run-hyperparameter-optimization">Run hyperparameter optimization</h2>
+<p>Once you defined the configuration file, you can run hyperparameter optimization using the <code>ldctbench-hpopt</code> command. The command takes two arguments: the path to the configuration file and the number of runs to execute. The number of runs determines how many times the optimization algorithm will sample hyperparameters and train the model. The more runs you specify, the more likely you are to find the optimal hyperparameters.</p>
+<p>To run ten steps of hyperparameter optimization using the configuration file described above, execute the following command:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>ldctbench-hpopt<span class="w"> </span>--config<span class="w"> </span>configs/cnn10-hpopt.yaml<span class="w"> </span>--n_runs<span class="w"> </span><span class="m">10</span>
+</span></code></pre></div>
+<p class="annotate">After all runs are completed, this script reports the best run(1). This run can be used as <code>--methods</code> argument to the <a class="autorefs autorefs-internal" title="Evaluate custom trained models" href="../test_models/#evaluate-custom-trained-models">test script</a>. You can also visualize the results in the W&amp;B dashboard by logging in to your W&amp;B account and navigating to the respective project/sweep.</p>
+<ol>
+<li>What is <em>best</em> is determined from the <code>metric</code> parameter in the config file. For the example above it would be the one that maximizes the SSIM on the validation data.</li>
+</ol>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>Bergstra, James, and Yoshua Bengio. 2012. “Random Search for Hyper-Parameter Optimization.” Journal of Machine Learning Research 13 (10): 281–305.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p>Bergstra, James, Rémi Bardenet, Yoshua Bengio, and Balázs Kégl. 2011. “Algorithms for Hyper-Parameter Optimization.” In . Vol. 24.&#160;<a class="footnote-backref" href="#fnref:2" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:3">
+<p>Snoek, Jasper, Hugo Larochelle, and Ryan P Adams. 2012. “Practical Bayesian Optimization of Machine Learning Algorithms.” In Advances in Neural Information Processing Systems. Vol. 25.&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
 </div>
 
 
@@ -1710,6 +1892,44 @@
         <footer class="md-footer">
   
     
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../test_models/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Test models">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Test models
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../ldct_iqa/" class="md-footer__link md-footer__link--next" aria-label="Next: Evaluation using LDCT IQA">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Evaluation using LDCT IQA
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -1733,12 +1953,12 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../../../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../../../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.footer", "content.code.copy"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": {"provider": "mike"}}</script>
     
     
-      <script src="../../../../../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f1b6f286.min.js"></script>
       
-        <script src="../../../../../js/katex.js"></script>
+        <script src="../../js/katex.js"></script>
       
         <script src="https://unpkg.com/katex@0/dist/katex.min.js"></script>
       
