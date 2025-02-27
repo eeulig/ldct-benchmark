@@ -49,31 +49,19 @@ Please read our [documentation](https://eeulig.github.io/ldct-benchmark/) for de
 We welcome contributions of novel denoising algorithms. For details on how to do so, please check out our [contributing guide](https://github.com/eeulig/ldct-benchmark/blob/main/CONTRIBUTING.md) or reach out to [me](mailto:elias.eulig@dkfz.de).
 
 ## Reference
-If you find this project useful for your work, please cite our [arXiv preprint](https://arxiv.org/abs/2401.04661):
-> Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms. arXiv, 2401.04661.
-
-```bibtex
-@article{ldctbench-arxiv,
-  title = {Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms}, 
-  author = {Elias Eulig and Björn Ommer and Marc Kachelrieß},
-  year = {2024},
-  eprint = {2401.04661},
-  archivePrefix = {arXiv},
-  primaryClass = {physics.med-ph}
-}
-```
-
-or [Medical Physics paper](https://doi.org/10.1002/mp.17379):
-> Elias Eulig, Björn Ommer, & Marc Kachelrieß (2024). Benchmarking Deep Learning-Based Low-Dose CT Image Denoising Algorithms. Medical Physics.
+If you find this project useful for your work, please cite our [Medical Physics paper](https://doi.org/10.1002/mp.17379):
+> E. Eulig, B. Ommer, and M. Kachelrieß, “Benchmarking deep learning-based low-dose CT image denoising algorithms,” Medical Physics, vol. 51, no. 12, pp. 8776–8788, Dec. 2024.
 
 ```bibtex
 @article{ldctbench-medphys,
   title = {Benchmarking deep learning-based low-dose CT image denoising algorithms},
   author = {Eulig, Elias and Ommer, Björn and Kachelrieß, Marc},
   journal = {Medical Physics},
-  year = {2024},
+  volume = {51},
+  number = {12},
+  pages = {8776-8788},
   doi = {https://doi.org/10.1002/mp.17379},
   url = {https://aapm.onlinelibrary.wiley.com/doi/abs/10.1002/mp.17379},
-  eprint = {https://aapm.onlinelibrary.wiley.com/doi/pdf/10.1002/mp.17379},
+  year = {2024}
 }
 ```
