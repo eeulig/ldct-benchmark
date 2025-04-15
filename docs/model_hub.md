@@ -8,7 +8,7 @@ where `<method>` is one of the method names provided in [this table][implemented
 ```python
 import numpy as np
 from ldctbench.hub import load_model, Methods
-from ldctbench.utils import preprocess, denormalize
+from ldctbench.evaluate import preprocess, denormalize
 
 method = Methods.RESNET # method="resnet" also works
 # Setup model
